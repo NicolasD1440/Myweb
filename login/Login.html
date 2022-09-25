@@ -14,15 +14,15 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <form action="validar.php" method="post" class="sign-in-form">
             <h2 class="title">Iniciar sesion</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nombre de usuario" />
+              <input type="text" name="usuario" placeholder="Nombre de usuario"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="text" name="password" placeholder="Contraseña" />
             </div>
             <input type="submit" name="inicio" value="Iniciar sesion" class="btn solid" />
             <p class="social-text">Ó inicia sesion con las redes sociales</p>
@@ -40,21 +40,21 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
-           
           </form>
+
           <form action="#" class="sign-up-form">
             <h2 class="title">Registrarse</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nombre de usuario" />
+              <input type="text" name="usuario2" placeholder="Nombre de usuario" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Correo" />
+              <input type="email" name="correo" placeholder="Correo" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" name="password2" placeholder="Contraseña" />
             </div>
             <input type="submit" class="btn" value="Registrarse" />
             <p class="social-text">Ó registrate con las redes sociales</p>
@@ -83,7 +83,7 @@
             <p>
               Registrate de forma sencilla con tu correo y contraseña o hazlo por medio
               de tus redes sociales.
-              
+
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Registrarse
