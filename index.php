@@ -1,5 +1,7 @@
 <?php session_start();
-error_reporting(0);?>
+error_reporting(0);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +111,8 @@ error_reporting(0);?>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-	        <a type="button" class="btn btn-primary" href="borrarcarro.php">Vaciar carrito</a>
+	        <a type="button" class="btn btn-primary" href="Carrito/borrarcarro.php">Vaciar carrito</a>
+			<a type="button" class="btn btn-primary" href="pedidos/pedidos.php">Continuar compra</a>
 	      </div>
 	    </div>
 	  </div>
@@ -130,7 +133,7 @@ error_reporting(0);?>
 	      <div class="modal-body">
 	        <ul class="profile-options-list">
 	        	<li>
-	        		<a href="login/Login.html"><i class="fas fa-user"></i> Mi perfil</a>
+	        		<a href="usuario/seguridad.php"><i class="fas fa-user"></i> Mi perfil</a>
 	        	</li>
 	        	<li>
 	        		<a href="#"><i class="fas fa-map-marker-alt"></i> Mis direcciones</a>
@@ -170,7 +173,7 @@ error_reporting(0);?>
 									<div class="tags">
 										<span>Descuento</span><span>Envío gratis</span>
 									</div>
-									<form id="formulario" name="formulario" method="post" action="cart.php">
+									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
 									<input name="precio" type="hidden" id="precio" value="10000" />
 					        <input name="titulo" type="hidden" id="titulo" value="Burrito especial" />
 					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
@@ -183,7 +186,7 @@ error_reporting(0);?>
 										<i class="fas fa-star"></i>
 									</div>
 								</div>
-								<p class="product-price"><span>$</span>14,99</p>
+								<p class="product-price"><span>$</span>10,000</p>
 							</div>
 							<div class="col text-center">
 								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
@@ -203,7 +206,7 @@ error_reporting(0);?>
 									<div class="tags">
 										<span>2x1</span><span>Descuento 50%</span>
 									</div>
-									<form id="formulario" name="formulario" method="post" action="cart.php">
+									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
 									<input name="precio" type="hidden" id="precio" value="15000" />
 					        <input name="titulo" type="hidden" id="titulo" value="Postre de la casa" />
 					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
@@ -218,7 +221,7 @@ error_reporting(0);?>
 										<i class="fas fa-star"></i>
 									</div>
 								</div>
-								<p class="product-price"><span>$</span>6,99</p>
+								<p class="product-price"><span>$</span>15,000</p>
 							</div>
 							<div class="col text-center">
 								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
@@ -238,7 +241,7 @@ error_reporting(0);?>
 									<div class="tags">
 										<span>2x1</span><span>Envío gratis</span><span>Descuento</span>
 									</div>
-									<form id="formulario" name="formulario" method="post" action="cart.php">
+									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
 									<input name="precio" type="hidden" id="precio" value="25000" />
 					        <input name="titulo" type="hidden" id="titulo" value="Salmón" />
 					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
@@ -252,7 +255,7 @@ error_reporting(0);?>
 										<i class="fas fa-star"></i>
 									</div>
 								</div>
-								<p class="product-price"><span>$</span>21,47</p>
+								<p class="product-price"><span>$</span>25,000</p>
 							</div>
 							<div class="col text-center">
 								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
@@ -272,7 +275,7 @@ error_reporting(0);?>
 									<div class="tags">
 										<span>Envío gratis</span>
 									</div>
-									<form id="formulario" name="formulario" method="post" action="cart.php">
+									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
 									<input name="precio" type="hidden" id="precio" value="20000" />
 					        <input name="titulo" type="hidden" id="titulo" value="Donas glaseadas x6" />
 					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
@@ -286,7 +289,7 @@ error_reporting(0);?>
 										<i class="fas fa-star"></i>
 									</div>
 								</div>
-								<p class="product-price"><span>$</span>9,99</p>
+								<p class="product-price"><span>$</span>20,000</p>
 							</div>
 							<div class="col text-center">
 								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
@@ -306,7 +309,7 @@ error_reporting(0);?>
 									<div class="tags">
 										<span>Envío gratis</span><span>Combo</span>
 									</div>
-									<form id="formulario" name="formulario" method="post" action="cart.php">
+									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
 									<input name="precio" type="hidden" id="precio" value="15000" />
 									<input name="titulo" type="hidden" id="titulo" value="Mega hamburguesa" />
 									<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
@@ -322,10 +325,10 @@ error_reporting(0);?>
 										<i class="fas fa-star"></i>
 									</div>
 								</div>
-								<p class="product-price"><span>$</span>15,99</p>
+								<p class="product-price"><span>$</span>15,000</p>
 
 							</div>
-						
+
 							<div class="col text-center">
 								<button class="btn btn-primary " type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
 							</div>
