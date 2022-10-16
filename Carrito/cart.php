@@ -12,6 +12,7 @@
 
 			 $_SESSION['Carrito_titulo']= $titulo;
              $_SESSION['Carrito_precio']= $precio;
+			
  		}
 	}else{
 		$titulo=$_POST['titulo'];

@@ -5,6 +5,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
 	<meta charset="UTF-8">
 	<title>JJD FOOD - App</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -112,7 +113,7 @@ error_reporting(0);
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 	        <a type="button" class="btn btn-primary" href="Carrito/borrarcarro.php">Vaciar carrito</a>
-			<a type="button" class="btn btn-primary" href="pedidos/pedidos.php">Continuar compra</a>
+			<a type="button" class="btn btn-primary" href="js/funciones.php">Continuar compra</a>
 	      </div>
 	    </div>
 	  </div>
@@ -354,5 +355,7 @@ error_reporting(0);
 	<script src="js/jquery.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	 
 </body>
+
 </html>

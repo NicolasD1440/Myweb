@@ -64,8 +64,13 @@
                                         <td><?php echo $carrito_mio[$i]['titulo']?></td>
                                         <td><?php dia_semana();?></td>
                                         </tr>
-
-                                        <?php }}} ?>
+                                                
+                                        <?php }}} 
+                                        //Precio (0,.....)
+                                        //Titulo (1,.....)
+                                        //(1,1),(1,2),(1,3)
+                                        
+                                        ?>
                                         
                                     </tbody>
                                     </table>
@@ -193,6 +198,7 @@
                                 echo $aleat.substr(str_shuffle($permitted_chars), 1, 1);
                                }
                                ?>
-                    
+            
 </body>
+
 </html>
