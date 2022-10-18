@@ -4,7 +4,12 @@
 
         <?php 
         session_start();
-        if (!isset($_SESSION["carrito"])) {
+        if (isset($_SESSION["usuario"])) {
+            if (isset($_SESSION["carrito"])) {
+                header("location: ../pedidos/pedidos.php");
+            }else{
+                
+            
          ?>
         <script>
                 Swal.fire({
@@ -23,8 +28,8 @@
                 })
             </script>
          <?php
-        }else {
-            header("location: ../pedidos/pedidos.php");
+         }}else {
+            header("location: ../login/Login.php");
         }
         ?>
         

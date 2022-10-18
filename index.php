@@ -19,7 +19,7 @@ error_reporting(0);
 
 	$carrito_mio=$_SESSION['carrito'];
 	$_SESSION['carrito']=$carrito_mio;
-	// contamos nuestro carrito
+	// contamos nuestro carrito hhhhh
 	if(isset($_SESSION['carrito'])){
 	    for($i=0;$i<=count($carrito_mio)-1;$i ++){
 	    if($carrito_mio[$i]!=NULL){
@@ -113,7 +113,10 @@ error_reporting(0);
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 	        <a type="button" class="btn btn-primary" href="Carrito/borrarcarro.php">Vaciar carrito</a>
-			<a type="button" class="btn btn-primary" href="js/funciones.php">Continuar compra</a>
+			
+			<a type="button" class="btn btn-primary" name="continuar" href="js/funciones.php">Continuar compra</a>
+		
+			
 	      </div>
 	    </div>
 	  </div>

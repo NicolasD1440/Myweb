@@ -6,6 +6,8 @@ $contraseña = $_POST['password'];
 session_start();
 $_SESSION['usuario'] = $usuario;
 $conexion = mysqli_connect("localhost","root","","jjd-food");
+
+  
 if (!empty($_POST["inicio"])) {
 
   $consulta = "SELECT * FROM usuarios WHERE Nombre ='$usuario' and contraseña = '$contraseña'";
@@ -18,6 +20,7 @@ if (!empty($_POST["inicio"])) {
   
   if ($filas) {
     header("location:../usuario/dashboard.php");
+   
   }else {
     echo "nop se pudo xd";
   
