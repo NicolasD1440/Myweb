@@ -5,7 +5,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
+	<!-- macaco con cara de rana-->
 	<meta charset="UTF-8">
 	<title>JJD FOOD - App</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -113,10 +113,10 @@ error_reporting(0);
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 	        <a type="button" class="btn btn-primary" href="Carrito/borrarcarro.php">Vaciar carrito</a>
-			
+
 			<a type="button" class="btn btn-primary" name="continuar" href="js/funciones.php">Continuar compra</a>
-		
-			
+
+
 	      </div>
 	    </div>
 	  </div>
