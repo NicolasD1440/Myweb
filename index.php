@@ -43,7 +43,7 @@ error_reporting(0);
 				 <h4><a data-bs-toggle="modal" data-bs-target="#modal_cart" class="float-left" style="color: #A17EFF;"><i class="fas fa-shopping-cart"></i> <?php echo $totalcantidad; ?></a></h4>
 				 </div>
 
-
+<!-- Avatar -->
 				<div class="col-auto">
 					<div class="avatar-container" data-target="#profileOptions" data-toggle="modal">
 						<img src="img/avatar.png" alt="">
