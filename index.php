@@ -158,10 +158,6 @@ error_reporting(0);
 	<main class="main">
 		<div class="container">
 			<div class="search-container">
-				<form>
-					<input type="text" name="searchInput" id="searchInput">
-					<button type="button" class="btn btn-primary btn-block">Buscar</button>
-				</form>
 			</div>
 			<div class="products-list-container">
 				<h2 class="section-title">Los más pedidos</h2>
