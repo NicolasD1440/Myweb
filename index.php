@@ -46,7 +46,7 @@ error_reporting(0);
 
 				<div class="col-auto">
 					<div class="avatar-container" data-target="#profileOptions" data-toggle="modal">
-						<img src="img/avatar.jpg" alt="">
+						<img src="img/avatar.png" alt="">
 						<i class="fas fa-cog"></i>
 					</div>
 				</div>
@@ -141,9 +141,6 @@ error_reporting(0);
 	        	</li>
 	        	<li>
 	        		<a href="#"><i class="fas fa-map-marker-alt"></i> Mis direcciones</a>
-	        	</li>
-	        	<li>
-	        		<a data-bs-toggle="modal" data-bs-target="#modal_cart"><i class="fas fa-credit-card"></i> Mis tarjetas</a>
 	        	</li>
 	        	<li>
 	        		<a href="#" class="text-danger"><i class="fas fa-times-circle"></i> Cerrar sesión</a>
