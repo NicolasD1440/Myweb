@@ -12,6 +12,7 @@
     <title>Login</title>
 
     <?php
+    //incio
     error_reporting(0);
     session_start();
     $_SESSION['Tabla']= $_GET["Tabla"];
