@@ -8,11 +8,12 @@
     <title>Inicia sesion o registraté</title>
   </head>
   <body>
+   
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
 
-          <form action="validar.php" method="post" class="sign-in-form">
+          <form action="Validar.php" method="post" class="sign-in-form">
             <h2 class="title">Iniciar sesion</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -25,19 +26,19 @@
             <input type="submit" name="inicio" value="Iniciar sesion" class="btn solid" />
             <p class="social-text">Ingreso para empleados</p>
             <div class="social-media">
-              <a href="../LogEmpleados/Ingreso.php?Usuario=administracion&Correo=correo&Contraseña=contraseña" class="social-icon">
+              <a href="../LogEmpleados/Ingreso.php?Tabla=administracion&usuario=Nombre&Contraseña=contraseña" class="social-icon">
               <i class="fa-solid fa-user-shield"></i>
               </a>
-              <a href="../LogEmpleados/Ingreso.php?Usuario=recursos_humanos&Correo=correo&Contraseña=contraseña" class="social-icon">
+              <a href="../LogEmpleados/Ingreso.php?Tabla=recursos_humanos&usuario=Nombre&Contraseña=contraseña" class="social-icon">
               <i class="fa-solid fa-headset"></i>
               </a>
-              <a href="../LogEmpleados/Ingreso.php?Usuario=contabilidad&Correo=correo&Contraseña=contraseña" class="social-icon">
+              <a href="../LogEmpleados/Ingreso.php?Tabla=contabilidad&usuario=Nombre&Contraseña=contraseña" class="social-icon">
                 <i class="fa-solid fa-briefcase"></i>
               </a>
             </div>
           </form>
 
-          <form action="Validar.php" class="sign-up-form" method="post">
+          <form action="validar.php" class="sign-up-form" method="post">
             <h2 class="title">Registrarse</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>

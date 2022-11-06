@@ -14,15 +14,15 @@
     <?php
     error_reporting(0);
     session_start();
-    $_SESSION['Usuario']= $_GET["Usuario"];
-    $_SESSION['Correo']= $_GET["Correo"];
+    $_SESSION['Tabla']= $_GET["Tabla"];
+    $_SESSION['usuario']= $_GET["usuario"];
     $_SESSION['Contraseña']= $_GET["Contraseña"];
+    $user = $_GET["usuario"];
+   
      ?>
   </head>
   <body>
-    <?php
-    echo "$Usuario"; 
-     ?>
+
     <main class="login-design">
          <div class="waves">
            <img src="Resources/ingreso.svg" alt="" width="300" height="400"/>
@@ -31,10 +31,10 @@
            <div class="login-data">
              <img src="Resources/img-ingreso.svg" width="200" height="200" />
              <h1>Inicio de Sesión</h1>
-             <form action="validar.php" method="post"class="login-form">
+             <form action="Validar.php" method="post"class="login-form">
                <div class="input-group">
                  <label class="input-fill">
-                   <input type="text" name="correo" id="correo" autocomplete="on" required />
+                   <input type="text" name="usuario" id="correo" autocomplete="on" required />
                    <span class="input-label">Correo Electrónico</span>
                    <i class="fas fa-envelope"></i>
                  </label>

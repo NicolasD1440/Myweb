@@ -1,46 +1,40 @@
 <?php
 session_start();
 error_reporting(0);
-$tabla = $_SESSION['Usuario'];
+//Datos por url
+$tabla = $_SESSION['Tabla'];
+$User = $_SESSION['usuario'];
 $Tipo_Contraseña = $_SESSION['Contraseña'];
-
-$usuario = $_POST["Nombre"];
+//Datos del login
+$usuario = $_POST["usuario"];
 $contraseña = $_POST["contraseña"];
+
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 
-$consulta = "SELECT * FROM $tabla WHERE $Tipo_Correo = '$usuario' and $Tipo_Contraseña = '$contraseña'";
+$consulta = "SELECT * FROM $tabla WHERE $User  = '$usuario' and $Tipo_Contraseña = '$contraseña'";
 $resultado = mysqli_query($conexion, $consulta);
 
 $Nom_usuario = mysqli_fetch_array($resultado);
 
 $filas = mysqli_num_rows($resultado);
 
-$_SESSION['miSesion']= array();
-$_SESSION['miSesion'][0] = $Nom_usuario[0];
-$_SESSION['miSesion'][1] = $Nom_usuario[1];
-$_SESSION['miSesion'][2] = $Nom_usuario[2];
-$_SESSION['miSesion'][3] = $Nom_usuario[3];
-$_SESSION['miSesion'][5] = $Nom_usuario[5];
-echo "$tabla";
-/*
+
+
 if ($filas && $tabla =="administracion") {
-  echo "string";
+  echo "admin";
 }
 else if ($filas && $tabla =="recursos_humanos") {
-  echo "string";
+  echo "rrhh";
 }
 else if ($filas && $tabla =="contabilidad") {
-  echo "string";
+  echo "cont";
 }
 else{
-  ?>
-  <body>
-      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="Alertas/Log_Error.js"></script>
-  </body>
+  echo "Error ";
 
-   <?php
+  echo $usuario;
+  echo $contraseña;
 }
 mysqli_free_result($resultado);
-mysqli_close($conexion);*/
+mysqli_close($conexion);
 ?>
