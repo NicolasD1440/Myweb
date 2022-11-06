@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/287753f600.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css"/>
     <title>Inicia sesion o registraté</title>
   </head>
@@ -14,7 +11,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          
+
           <form action="validar.php" method="post" class="sign-in-form">
             <h2 class="title">Iniciar sesion</h2>
             <div class="input-field">
@@ -26,19 +23,16 @@
               <input type="text" name="password" placeholder="Contraseña" />
             </div>
             <input type="submit" name="inicio" value="Iniciar sesion" class="btn solid" />
-            <p class="social-text">Ó inicia sesion con las redes sociales</p>
+            <p class="social-text">Ingreso para empleados</p>
             <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
+              <a href="../LogEmpleados/Ingreso.php?Usuario=administracion&Correo=correo&Contraseña=contraseña" class="social-icon">
+              <i class="fa-solid fa-user-shield"></i>
               </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
+              <a href="../LogEmpleados/Ingreso.php?Usuario=recursos_humanos&Correo=correo&Contraseña=contraseña" class="social-icon">
+              <i class="fa-solid fa-headset"></i>
               </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="../LogEmpleados/Ingreso.php?Usuario=contabilidad&Correo=correo&Contraseña=contraseña" class="social-icon">
+                <i class="fa-solid fa-briefcase"></i>
               </a>
             </div>
           </form>
@@ -47,31 +41,31 @@
             <h2 class="title">Registrarse</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="Nom_user" placeholder="Nombre de usuario" />
+              <input type="text" required name="Nom_user" placeholder="Nombre de usuario" />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="Nom" placeholder="Nombre" />
+              <input type="text" required name="Nom" placeholder="Nombre" />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="Ape" placeholder="Apellido" />
+              <input type="text" required name="Ape" placeholder="Apellido" />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="Edad" placeholder="Edad" />
+              <input type="text" required name="Edad" placeholder="Edad" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" name="email" placeholder="Correo" />
+              <input type="email" required name="email" placeholder="Correo" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" name="password2" placeholder="Contraseña" />
+              <input type="password" required name="password2" placeholder="Contraseña" />
             </div>
             <input type="submit" class="btn" value="Registrarse" name="registro"/>
-            
-            
+
+
           </form>
         </div>
       </div>
