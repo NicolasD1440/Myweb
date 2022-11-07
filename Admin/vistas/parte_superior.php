@@ -149,12 +149,6 @@ $_SESSION["id_user"] = $Datos[0];
                                 </form>
                             </div>
                         </li>
-
-                        <!-- Nav Item - Alerts -->
-                      
-                        <!-- Nav Item - Messages -->
-
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
