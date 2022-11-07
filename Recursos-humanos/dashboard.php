@@ -9,6 +9,7 @@ $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
 $_SESSION["id_user"] = $Datos[0];
+
 ?>
 
 <!DOCTYPE html>
@@ -247,94 +248,30 @@ $_SESSION["id_user"] = $Datos[0];
                         <h1 class="h3 mb-0 text-gray-800">Perfil</h1>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- CONTENIDO DEL DASHBOARD -->
                     <div class="row">
-
-                        <!-- Nombre usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Apellido usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Correo usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Edad usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
-                            <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
-                            <div class="card-body">
-                              <p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+                   
+                        <div class="card text-center mx-auto">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <?php 
+                        echo fecha();?>
+                    </div>
                     </div>
 
+                      
+
+                       
+                       
+                       
+                    </div>
                 </div>
 
                 <!-- /.container-fluid -->
@@ -403,3 +340,37 @@ $_SESSION["id_user"] = $Datos[0];
 </body>
 
 </html>
+<?php 
+function fecha(){
+    setlocale(LC_ALL, 'es_ES');
+    date_default_timezone_set( 'America/Bogota' );
+    $day = date("l");
+    $plus = date("d");
+    $time = date("h:i:s A");
+    switch ($day) {
+        case "Sunday":
+            echo "domingo ".$plus ." ".$time;
+        break;
+        case "Monday":
+            echo "lunes ".$plus." ".$time;
+        break;
+        case "Tuesday":
+            echo "martes ".$plus." ".$time;
+        break;
+        case "Wednesday":
+            echo "miércoles ".$plus." ".$time;
+        break;
+        case "Thursday":
+            echo "jueves ".$plus." ".$time;
+        break;
+        case "Friday":
+            echo "viernes ".$plus." ".$time;
+        break;
+        case "Saturday":
+            echo "sábado ".$plus." ".$time;
+        break;
+    }
+}
+
+
+?>
