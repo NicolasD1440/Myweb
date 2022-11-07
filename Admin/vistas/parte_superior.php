@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+error_reporting(0);
+session_start();
+$conexion = mysqli_connect("localhost","root","","jjd-food");
+$nombre_usuario =  $_SESSION['usuarioemple'];
+
+$query = "SELECT * FROM `administracion` WHERE  Nombre = '$nombre_usuario'";
+$resultado = mysqli_query($conexion,$query);
+
+$Datos = mysqli_fetch_array($resultado);
+$_SESSION["id_user"] = $Datos[0];
+?>
 <html lang="en">
 
 <head>
@@ -261,7 +273,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nombre_usuario." ".$Datos[2]?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>

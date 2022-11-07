@@ -7,6 +7,7 @@ $User = $_SESSION['usuario'];
 $Tipo_Contraseña = $_SESSION['Contraseña'];
 //Datos del login
 $usuario = $_POST["usuario"];
+$_SESSION["usuarioemple"]=$usuario;
 $contraseña = $_POST["contraseña"];
 
 $conexion = mysqli_connect("localhost","root","","jjd-food");
