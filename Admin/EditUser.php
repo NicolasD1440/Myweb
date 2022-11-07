@@ -8,6 +8,9 @@
            <li class="nav-item" role="presentation">
              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Clientes</button>
            </li>
+           <li class="nav-item" role="presentation">
+             <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Pedidos</button>
+           </li>
          </ul>
          <br>
          <div class="tab-content" id="myTabContent" >
@@ -54,6 +57,47 @@
                    </table>
                </div>
              </div>
+           </div>
+
+           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+               <div class="mx-auto">
+                <div class="caja col-11 mx-auto">
+                 <div class="col-8">
+                   <table class="table table-responsive-sm">
+                   <thead>
+                       <tr>
+                       <th scope="col">id</th>
+                       <th scope="col">Precio</th>
+                       <th scope="col">Fecha</th>
+                       <th scope="col">Tipo</th>
+                       <th scope="col">Direccion</th>
+                       <th scope="col">Eliminar</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                   <?php
+                   $conexion = mysqli_connect("localhost","root","","jjd-food");
+                   $id_user = $_SESSION["id_user"];
+                   $consulta = "SELECT * FROM `pedido`";
+                   $resultado = mysqli_query($conexion, $consulta);
+                   while ($Rows = mysqli_fetch_array($resultado)) {
+                     echo "<tr>";
+                     echo "<td>$Rows[0]</td>";
+                     echo "<td>$Rows[1]</td>";
+                     echo "<td>$Rows[2]</td>";
+                     echo "<td>$Rows[3]</td>";
+                     echo "<td>$Rows[4]</td>";
+                     echo "<td><a href='../Admin/edits/EliminarPedido.php?idped= $Rows[0]'>Eliminar</a> </td>";
+                     echo "</tr>";
+                   }
+
+                     ?>
+                   </tbody>
+                   </table>
+               </div>
+             </div>
+           </div>
+
            </div>
          </div>
       </div>
