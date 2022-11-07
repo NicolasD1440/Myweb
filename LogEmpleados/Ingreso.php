@@ -19,7 +19,7 @@
     $_SESSION['usuario']= $_GET["usuario"];
     $_SESSION['Contraseña']= $_GET["Contraseña"];
     $user = $_GET["usuario"];
-   
+
      ?>
   </head>
   <body>
