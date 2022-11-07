@@ -62,7 +62,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="number" required name="telefono" placeholder="Telefono" />
+              <input type="number" required name="Telefono" placeholder="Telefono" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
