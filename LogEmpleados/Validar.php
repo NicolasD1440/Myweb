@@ -21,7 +21,7 @@ $filas = mysqli_num_rows($resultado);
 
 
 if ($filas && $tabla =="administracion") {
-  echo "admin";
+  header ("location:../Admin/Admin.php");
 }
 else if ($filas && $tabla =="recursos_humanos") {
   echo "rrhh";

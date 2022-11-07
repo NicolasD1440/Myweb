@@ -8,7 +8,7 @@
     <title>Inicia sesion o registraté</title>
   </head>
   <body>
-   
+
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -59,6 +59,10 @@
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" required name="email" placeholder="Correo" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="number" required name="telefono" placeholder="Telefono" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
