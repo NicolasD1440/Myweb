@@ -59,7 +59,7 @@
             </div>
             <div class="mx-auto">
               <div class="card col-20" style="width: 18rem;">
-                <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
+                <img src="img/undraw_profile_2.svg" class="card-img-top" width="100" height="100">
                 <div class="card-body">
                   <center><p class="card-text">
                     <h6>Nombre: <?php echo $Datos[1]?></h6>
