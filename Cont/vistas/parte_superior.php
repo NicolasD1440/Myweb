@@ -55,7 +55,7 @@ $_SESSION["id_user"] = $Datos[0];
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="../Cont/Contable.php">
+                <a class="nav-link" href="Contable.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pagina Principal</span></a>
             </li>
@@ -77,9 +77,9 @@ $_SESSION["id_user"] = $Datos[0];
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="Empleados.php">Empleados</a>
-                        <a class="collapse-item" href="Clientes.php">Clientes</a>
+                        <h6 class="collapse-header">Principal:</h6>
+                        <a class="collapse-item" href="GP.php">Graficas Principales </a>
+                        <a class="collapse-item" href="#">No se que poner gg</a>
                     </div>
                 </div>
             </li>
@@ -94,10 +94,10 @@ $_SESSION["id_user"] = $Datos[0];
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="EditEmple.php">Editar Empleado</a>
-                        <a class="collapse-item" href="Inventario.php">Editar Inventario</a>
-                        <a class="collapse-item" href="EditUser.php">Editar Usuario</a>
+                        <h6 class="collapse-header">Precios platos:</h6>
+                        <a class="collapse-item" href="#">Graf. platos</a>
+                        <a class="collapse-item" href="#">Precio, platos</a>
+                        <!--<a class="collapse-item" href="EditUser.php">Editar Usuario</a> -->
                     </div>
                 </div>
             </li>
