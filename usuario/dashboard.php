@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+include("seguridad.php");
 session_start();
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['Usuario'];
