@@ -2,11 +2,13 @@
 error_reporting(0);
 session_start();
 $conexion = mysqli_connect("localhost","root","","jjd-food");
+$nombre_usuario =  $_SESSION['usuarioemple'];
 
-$query = "SELECT * FROM `mensajes`";
+$query = "SELECT * FROM `recursos_humanos` WHERE  Nombre = '$nombre_usuario'";
 $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
+$_SESSION["id_user"] = $Datos[0];
 
 
 ?>
@@ -214,7 +216,7 @@ $Datos = mysqli_fetch_array($resultado);
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo "$nombre_usuario" ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $Datos[1]." ".$Datos[2]?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -254,91 +256,72 @@ $Datos = mysqli_fetch_array($resultado);
                     <!-- CONTENIDO DEL DASHBOARD -->
                     <div class="row">
 
-                        <!-- Nombre usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
-                                        </div>
-                                        <div class="col-auto">
+                           <!-- Nombre usuario Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4 mx-auto">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Nombre</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[1]." ".$Datos[2]?></div>
+                            </div>
+                            <div class="col-auto">
 
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Correo usuario Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4 mx-auto">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Cargo</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
+                            </div>
+                            <div class="col-auto">
 
-                        <!-- Apellido usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Correo usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
-                                        </div>
-                                        <div class="col-auto">
+            <!-- Edad usuario Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4 mx-auto">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Salario</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
+                            </div>
+                            <div class="col-auto">
 
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
-                        <!-- Edad usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
-                            <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
-                            <div class="card-body">
-                              <p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                   
-                        
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto">
+              <div class="card col-20" style="width: 18rem;">
+                <img src="img/undraw_profile_2.svg" class="card-img-top" width="100" height="100">
+                <div class="card-body">
+                  <center><p class="card-text">
+                    <h6>Nombre: <?php echo $Datos[1]?></h6>
+                    <h6>Apellido: <?php echo $Datos[2]?></h6>
+                    <h6>Cargo: <?php echo $Datos[3]?></h6>
+                    <h6>Salario: <?php echo $Datos[4]?></h6>
+                  </p></center>
+                </div>
+              </div>
+            </div>
+ 
 
                       
 
