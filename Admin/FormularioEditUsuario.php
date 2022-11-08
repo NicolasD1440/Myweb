@@ -15,6 +15,7 @@ $query = "SELECT * FROM `usuarios` WHERE id = $Iduser";
 $resultado = mysqli_query($conexion,$query);
 $mostrar = mysqli_fetch_array($resultado);
 
+
  ?>
  <?php require_once "vistas/parte_superior.php" ?>
  <form class="formulario" action="edits/EditarUsuario.php" method="post">

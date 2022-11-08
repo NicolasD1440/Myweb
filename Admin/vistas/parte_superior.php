@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <?php
 error_reporting(0);
-include("../../seguridad.php");
-
 session_start();
+if (!isset($_SESSION['usuarioemple'])) {
+    header("location: ../login/Login.php");
+}
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['usuarioemple'];
 $Idlogem =  $_SESSION['idlogem'];
