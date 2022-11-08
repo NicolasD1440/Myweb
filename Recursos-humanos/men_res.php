@@ -96,8 +96,9 @@ $Datos = mysqli_fetch_array($resultado);
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Navegacion:</h6>
+                    
                         <a class="collapse-item" href="../index.php">Pagina principal</a>
-            
+                        
                     </div>
                 </div>
             </li>
@@ -173,7 +174,8 @@ $Datos = mysqli_fetch_array($resultado);
 
 
                         <!-- Items de los mensajes - Messages -->
-                        <?php 
+                         <!-- Items de los mensajes - Messages -->
+                         <?php 
                         $conexion = mysqli_connect("localhost","root","","jjd-food");
                         $query = "SELECT count(estado) FROM mensajes WHERE estado= 0";
                         $resultado = mysqli_query($conexion,$query);
@@ -207,7 +209,6 @@ $Datos = mysqli_fetch_array($resultado);
                                 </a>
                             </div>
                         </li>
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -248,95 +249,46 @@ $Datos = mysqli_fetch_array($resultado);
 
                     <!-- Cabecera de la pagina -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Perfil</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Mensajes respondidos</h1>
                     </div>
 
                     <!-- CONTENIDO DEL DASHBOARD -->
                     <div class="row">
 
-                        <!-- Nombre usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Apellido usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Correo usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Edad usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
-                            <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
-                            <div class="card-body">
-                              <p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+                        <?php
+                  $consulta = "SELECT * FROM mensajes";
+                  $conexion = mysqli_connect("localhost","root","","jjd-food");
+                  $resultado = mysqli_query($conexion, $consulta);
+                  while ($Datos = mysqli_fetch_array($resultado)) {
+                  $id_men = $Datos[1];
+                  if ($Datos[4]== 1) {
+                   
+                  
+                    ?>
+                    
+                    <div class="card text-center mx-auto col-8">
+                    <div class="card-header">
+                    <h2>Asunto: <?php echo $Datos[2]?></h2>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo "Mensaje del usuario";?></h5>
+                        <h3 class="card-text"> <?php echo $Datos[3]?></h3>
+                           
+                        <form action="validar.php?id_res=<?php echo $id_men?>" method="post">
+                        <p>Estado : RESPONDIDO</p>
+                        <br>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <?php 
+                        echo fecha();?>
+                    </div>
+                    </div>
+                    
+                    <?php
+                   }
+                  }
+                   ?>
                    
                         
 

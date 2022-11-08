@@ -2,20 +2,23 @@
 error_reporting(0);
 session_start();
 $conexion = mysqli_connect("localhost","root","","jjd-food");
+$nombre_usuario =  $_SESSION['Usuario'];
 
-$query = "SELECT * FROM `mensajes`";
+$query = "SELECT * FROM `usuarios` WHERE  Nombre = '$nombre_usuario'";
 $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
 
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f959a384d4.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -48,7 +51,7 @@ $Datos = mysqli_fetch_array($resultado);
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">JJD FOOD</div>
+                <div class="sidebar-brand-text mx-3">JJD FOOD </div>
             </a>
 
             <!-- Divider -->
@@ -96,8 +99,9 @@ $Datos = mysqli_fetch_array($resultado);
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Navegacion:</h6>
+                        
                         <a class="collapse-item" href="../index.php">Pagina principal</a>
-            
+                        
                     </div>
                 </div>
             </li>
@@ -130,19 +134,7 @@ $Datos = mysqli_fetch_array($resultado);
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -170,10 +162,8 @@ $Datos = mysqli_fetch_array($resultado);
                                 </form>
                             </div>
                         </li>
-
-
-                        <!-- Items de los mensajes - Messages -->
-                        <?php 
+ <!-- Items de los mensajes - Messages -->
+ <?php 
                         $conexion = mysqli_connect("localhost","root","","jjd-food");
                         $query = "SELECT count(estado) FROM mensajes WHERE estado= 0";
                         $resultado = mysqli_query($conexion,$query);
@@ -248,104 +238,103 @@ $Datos = mysqli_fetch_array($resultado);
 
                     <!-- Cabecera de la pagina -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Perfil</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Editar datos</h1>
                     </div>
 
-                    <!-- CONTENIDO DEL DASHBOARD -->
+                    <!-- Editar el perfil -->
                     <div class="row">
-
-                        <!-- Nombre usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
+                    
+                        <div class="container">
+                          <div class="row">
+                           <div class="caja col-md-8 offset-md-2 shadow">
+                             <ul class="nav nav-tabs" id="myTab" role="tablist">
+                               <li class="nav-item" role="presentation">
+                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Datos personales</button>
+                               </li>
+                               <li class="nav-item" role="presentation">
+                                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Actualizar contraseña</button>
+                               </li>
+                             </ul>
+                             <br>
+                             <div class="tab-content" id="myTabContent" >
+                               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                 <div class="row">
+                    
+                                   <div class="col-4">
+                                     <img class="img-thumbnail" src="img/undraw_profile.svg" width="200px" >
+                                   </div>
+                    
+                                   <div class="col-8">
+                                     <form class="" action="accion.php" method="get">
+                    
+                                       <div class="form-group row">
+                                         <label for="codigo" class="col-3">Nombre:</label>
+                                         <div class="col-8">
+                                           <input type="text" name="nombre_al" value="<?php echo $Datos[2]?>" class="form-control">
+                                         </div>
+                                       </div>
+                    
+                                       <div class="form-group row">
+                                         <label for="Usuario" class="col-3">Apellido:</label>
+                                         <div class="col-8">
+                                           <input type="text" name="apellido_al" value="<?php echo $Datos[3]?>" class="form-control">
+                                         </div>
+                                       </div>
+                    
+                                       <div class="form-group row">
+                                         <label for="email" class="col-3">Correo: </label>
+                    
+                                         <div class="col-8">
+                                           <input type="text" name="Correo" value="<?php echo $Datos[5] ?>" class="form-control" >
+                                         </div>
+                    
+                                       </div>
+                                         
+                                          
+                                        
+                    
+                    
+                                       <div class="form-group text-center">
+                                         <button type="submit" name="button" class="btn btn-info">Actualizar</button>
+                                       </div>
+                    
+                                     </form>
+                                   </div>
+                                 </div>
+                               </div>
+                    
+                               <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                 <div class="col-md-8 offset-md-3">
+                                   <h3 class="text-center">Cambio de clave</h3>
+                             <!-- Formualrio cambio de clave -->
+                    
+                                   <form class="" action="accion.php" method="get">
+                                   <div class="form-group row">
+                                     <label for="Usuario" class="col-4">Correo:</label>
+                                     <div class="col-8">
+                                      <input type="text" name="email" value="<?php echo $Datos[5]; ?>" class="form-control" readonly>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Apellido usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
+                                  </div>
+                    
+                                  <div class="form-group row">
+                                    <label for="nContraseña" class="col-4">Nueva contraseña:</label>
+                                    <div class="col-8">
+                                      <input type="password" name="pass_new" value="" class="form-control">
                                     </div>
+                                  </div>
+                                  <div class="form-group text-center">
+                                    <button type="submit" name="button2" class="btn btn-info">Actualizar</button>
+                                  </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Correo usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Edad usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
-                            <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
-                            <div class="card-body">
-                              <p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                   
-                        
-
-                      
-
-                       
-                       
-                       
+                      </div>
+                    
+                            </from>
                     </div>
+
                 </div>
 
                 <!-- /.container-fluid -->
@@ -388,7 +377,7 @@ $Datos = mysqli_fetch_array($resultado);
                 <div class="modal-body">Seleciona "Cerrar sesion" si estas seguro de que quires cerrar sesion.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../logout/logout.php">Cerrar sesion</a>
+                    <a class="btn btn-primary" href="../index.php">Cerrar sesion</a>
                 </div>
             </div>
         </div>
@@ -414,37 +403,3 @@ $Datos = mysqli_fetch_array($resultado);
 </body>
 
 </html>
-<?php 
-function fecha(){
-    setlocale(LC_ALL, 'es_ES');
-    date_default_timezone_set( 'America/Bogota' );
-    $day = date("l");
-    $plus = date("d");
-    $time = date("h:i:s A");
-    switch ($day) {
-        case "Sunday":
-            echo "domingo ".$plus ." ".$time;
-        break;
-        case "Monday":
-            echo "lunes ".$plus." ".$time;
-        break;
-        case "Tuesday":
-            echo "martes ".$plus." ".$time;
-        break;
-        case "Wednesday":
-            echo "miércoles ".$plus." ".$time;
-        break;
-        case "Thursday":
-            echo "jueves ".$plus." ".$time;
-        break;
-        case "Friday":
-            echo "viernes ".$plus." ".$time;
-        break;
-        case "Saturday":
-            echo "sábado ".$plus." ".$time;
-        break;
-    }
-}
-
-
-?>

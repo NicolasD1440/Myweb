@@ -96,8 +96,9 @@ $Datos = mysqli_fetch_array($resultado);
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Navegacion:</h6>
+ 
                         <a class="collapse-item" href="../index.php">Pagina principal</a>
-            
+                   
                     </div>
                 </div>
             </li>
@@ -130,19 +131,7 @@ $Datos = mysqli_fetch_array($resultado);
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                 
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -173,40 +162,8 @@ $Datos = mysqli_fetch_array($resultado);
 
 
                         <!-- Items de los mensajes - Messages -->
-                        <?php 
-                        $conexion = mysqli_connect("localhost","root","","jjd-food");
-                        $query = "SELECT count(estado) FROM mensajes WHERE estado= 0";
-                        $resultado = mysqli_query($conexion,$query);
+                      
                         
-                        $mensajes = mysqli_fetch_array($resultado);
-                        
-                        ?>
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter"><?php echo $mensajes[0] ?></span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Mensajes
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="men_no_res.php">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Tienes <?php echo $mensajes[0] ?> mensajes sin responder</div>
-                                        <div class="small text-gray-500">Equipo administrativo</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -248,95 +205,48 @@ $Datos = mysqli_fetch_array($resultado);
 
                     <!-- Cabecera de la pagina -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Perfil</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Mensajes no respondidos</h1>
                     </div>
 
                     <!-- CONTENIDO DEL DASHBOARD -->
                     <div class="row">
 
-                        <!-- Nombre usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Apellido usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Correo usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Edad usuario Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
-                                        </div>
-                                        <div class="col-auto">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
-                            <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
-                            <div class="card-body">
-                              <p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+                        <?php
+                  $consulta = "SELECT * FROM mensajes";
+                  $conexion = mysqli_connect("localhost","root","","jjd-food");
+                  $resultado = mysqli_query($conexion, $consulta);
+                  while ($Datos = mysqli_fetch_array($resultado)) {
+                  $id_men = $Datos[1];
+                  if ($Datos[4]== 0) {
+                   
+                  
+                    ?>
+                    
+                    <div class="card text-center mx-auto col-8">
+                    <div class="card-header">
+                    <p>Asunto: <?php echo $Datos[2]?></p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo "Mensaje del usuario";?></h5>
+                        <p class="card-text"> <?php echo $Datos[3]?></p>
+                           
+                        <form action="validar.php?id_res=<?php echo $id_men?>" method="post">
+                        <input type="text" name="respuesta" required>
+                        <br>
+                        <br>
+                        <button type="submit" name="res" class="btn btn-primary">Enviar Datos</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <?php 
+                        echo fecha();?>
+                    </div>
+                    </div>
+                    
+                    <?php
+                   }
+                  }
+                   ?>
                    
                         
 
