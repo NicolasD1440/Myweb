@@ -30,6 +30,7 @@
                        <th scope="col">Telefono</th>
                        <th scope="col">Contraseña</th>
                        <th scope="col">Eliminar</th>
+                       <th scope="col">Editar</th>
                        </tr>
                    </thead>
                    <tbody>
@@ -49,6 +50,7 @@
                      echo "<td>$Rows[6]</td>";
                      echo "<td>$Rows[7]</td>";
                      echo "<td><a href='../Admin/edits/EliminarUser.php?iduser= $Rows[0]'>Eliminar</a> </td>";
+                     echo "<td><a href='../Admin/FormularioEditUsuario.php?iduser= $Rows[0]'>Editar</a> </td>";
                      echo "</tr>";
                    }
 
