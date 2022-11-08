@@ -42,27 +42,29 @@
             <h2 class="title">Registrarse</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" required name="Nom_user" placeholder="Nombre de usuario" />
+
+              <input type="text" name="Nom_user" placeholder="Nombre de usuario" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" required name="Nom" placeholder="Nombre" />
+              <input type="text" name="Nom" placeholder="Nombre" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" required name="Ape" placeholder="Apellido" />
+              <input type="text" name="Ape" placeholder="Apellido" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" required name="Edad" placeholder="Edad" />
+              <input type="text" name="Edad" placeholder="Edad" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" required name="email" placeholder="Correo" />
+              <input type="email" name="email" placeholder="Correo" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" required name="password2" placeholder="Contraseña" />
+              <input type="password" name="password2" placeholder="Contraseña" required/>
+
             </div>
             <input type="submit" class="btn" value="Registrarse" name="registro"/>
 
