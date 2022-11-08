@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2022 at 11:17 PM
+-- Generation Time: Nov 08, 2022 at 03:19 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -93,16 +93,20 @@ INSERT INTO `dependencias` (`id`, `Dependecia`) VALUES
 
 CREATE TABLE `mensajes` (
   `id` int(11) NOT NULL,
+  `id_mensaje` int(11) NOT NULL,
   `Asunto` varchar(45) NOT NULL,
-  `Mensaje` varchar(100) NOT NULL
+  `mensaje` varchar(100) NOT NULL,
+  `estado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `mensajes`
 --
 
-INSERT INTO `mensajes` (`id`, `Asunto`, `Mensaje`) VALUES
-(1, 'Felicitaciones', 'La comida esta muy rica :D');
+INSERT INTO `mensajes` (`id`, `id_mensaje`, `Asunto`, `mensaje`, `estado`) VALUES
+(1, 2000, 'Felicitaciones', 'La comida ta buena :D', 0),
+(1, 2020, 'nose', 'hola', 1),
+(1, 2022, 'Queja', 'La comida no esta tan buena :(', 0);
 
 -- --------------------------------------------------------
 
@@ -127,7 +131,8 @@ INSERT INTO `pedido` (`id`, `Precio`, `Fecha`, `tipo`, `direccion`) VALUES
 (1, 50000, 'jueves', 'Plazoleta', 'Centro comercial'),
 (1, 50000, 'sábado', 'Plazoleta', 'Centro comercial'),
 (1, 30000, 'sábado', 'domicilio', 'calle 74 sur'),
-(1, 25000, 'sábado', 'Plazoleta', 'Centro comercial');
+(1, 25000, 'sábado', 'Plazoleta', 'Centro comercial'),
+(1, 10000, 'lunes', 'Plazoleta', 'Centro comercial');
 
 -- --------------------------------------------------------
 
@@ -150,6 +155,25 @@ CREATE TABLE `recursos_humanos` (
 
 INSERT INTO `recursos_humanos` (`id`, `Nombre`, `Apellido`, `Dependencia`, `Salario`, `Contraseña`) VALUES
 (6, 'Nicolas', 'Perez', 'Recursos humanos', 900000, 123);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `respuesta`
+--
+
+CREATE TABLE `respuesta` (
+  `id-mensaje` int(11) NOT NULL,
+  `Asunto` varchar(25) NOT NULL,
+  `Mensaje` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `respuesta`
+--
+
+INSERT INTO `respuesta` (`id-mensaje`, `Asunto`, `Mensaje`) VALUES
+(2020, 'Respuesta', 'hola');
 
 -- --------------------------------------------------------
 
@@ -201,6 +225,7 @@ ALTER TABLE `dependencias`
 -- Indexes for table `mensajes`
 --
 ALTER TABLE `mensajes`
+  ADD PRIMARY KEY (`id_mensaje`),
   ADD KEY `id` (`id`);
 
 --
@@ -215,6 +240,12 @@ ALTER TABLE `pedido`
 ALTER TABLE `recursos_humanos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Dependencia` (`Dependencia`);
+
+--
+-- Indexes for table `respuesta`
+--
+ALTER TABLE `respuesta`
+  ADD KEY `id-mensaje` (`id-mensaje`);
 
 --
 -- Indexes for table `usuarios`
@@ -242,7 +273,7 @@ ALTER TABLE `recursos_humanos`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -277,6 +308,12 @@ ALTER TABLE `pedido`
 --
 ALTER TABLE `recursos_humanos`
   ADD CONSTRAINT `recursos_humanos_ibfk_1` FOREIGN KEY (`Dependencia`) REFERENCES `dependencias` (`Dependecia`);
+
+--
+-- Constraints for table `respuesta`
+--
+ALTER TABLE `respuesta`
+  ADD CONSTRAINT `respuesta_ibfk_2` FOREIGN KEY (`id-mensaje`) REFERENCES `mensajes` (`id_mensaje`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

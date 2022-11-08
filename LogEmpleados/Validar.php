@@ -43,7 +43,23 @@ if ($filas && $tabla =="administracion") {
 <?php
 }
 else if ($filas && $tabla =="recursos_humanos") {
-  echo "rrhh";
+  ?>
+  <script>
+    Swal.fire({
+      title: 'Bienvenido',
+      text: "<?php echo $Nom_usuario[1]." ".$Nom_usuario[2] ?>",
+      icon: 'success',
+      showCancelButton: false,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ok'
+      }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href="../Recursos-humanos/dashboard.php"
+      }
+      })
+  </script>
+<?php
 }
 else if ($filas && $tabla =="contabilidad") {
   echo "cont";
