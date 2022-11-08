@@ -19,7 +19,7 @@
     $_SESSION['usuario']= $_GET["usuario"];
     $_SESSION['Contraseña']= $_GET["Contraseña"];
     $user = $_GET["usuario"];
-   
+
      ?>
   </head>
   <body>
@@ -36,7 +36,7 @@
                <div class="input-group">
                  <label class="input-fill">
                    <input type="text" name="usuario" id="correo" autocomplete="on" required />
-                   <span class="input-label">Correo Electrónico</span>
+                   <span class="input-label">Nombre - Usuario</span>
                    <i class="fas fa-envelope"></i>
                  </label>
                </div>
@@ -47,7 +47,7 @@
                    <i class="fas fa-lock"></i>
                  </label>
                </div>
-               <a href="#">¿Olvidaste la contraseña?</a>
+               <td><a href="../login/Login.php">Volver al login de clientes</a></td>
                <input type="submit" value="Iniciar Sesión" class="btn-login" />
              </form>
            </div>

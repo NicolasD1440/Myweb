@@ -134,20 +134,6 @@ $_SESSION["id_user"] = $Datos[0];
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -322,14 +308,15 @@ $_SESSION["id_user"] = $Datos[0];
                             </div>
                         </div>
                         <div class="mx-auto">
-                          <div class="card" style="width: 18rem;">
+                          <div class="card col-20" style="width: 18rem;">
                             <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
                             <div class="card-body">
-                              <p class="card-text">
+                              <center><p class="card-text">
                                 <h6>Nombre: <?php echo $Datos[2]?></h6>
                                 <h6>Apellido: <?php echo $Datos[3]?></h6>
                                 <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                              </p>
+                                <h6>Telefono: <?php echo $Datos[6]?></h6>
+                              </p></center>
                             </div>
                           </div>
                         </div>

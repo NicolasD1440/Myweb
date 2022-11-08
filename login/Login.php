@@ -8,7 +8,7 @@
     <title>Inicia sesion o registraté</title>
   </head>
   <body>
-   
+
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -17,11 +17,11 @@
             <h2 class="title">Iniciar sesion</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="usuario" placeholder="Nombre de usuario"/>
+              <input type="text" required name="usuario" placeholder="Nombre de usuario"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="text" name="password" placeholder="Contraseña" />
+              <input type="text" required name="password" placeholder="Contraseña" />
             </div>
             <input type="submit" name="inicio" value="Iniciar sesion" class="btn solid" />
             <p class="social-text">Ingreso para empleados</p>
@@ -60,6 +60,10 @@
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" name="email" placeholder="Correo" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="number" required name="Telefono" placeholder="Telefono" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
