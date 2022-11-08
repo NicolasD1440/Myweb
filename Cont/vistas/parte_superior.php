@@ -182,8 +182,8 @@ $_SESSION["id_user"] = $Datos[0];
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">Octubre 7, 2022</div>
+                                        $290.290 Han sido depositados a su cuenta!
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -280,15 +280,15 @@ $_SESSION["id_user"] = $Datos[0];
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="../Cont/Contable.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    Perfil
                                 </a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href=../LogEmpleados/logoutemple/logoutemple.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../LogEmpleados/logoutemple/logoutemple.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cerrar sesion
                                 </a>
                             </div>
                         </li>
