@@ -1,3 +1,5 @@
+<body style="background: linear-gradient(to right, #18A6FD, #C61CBC)">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
 session_start();
 error_reporting(0);
@@ -22,7 +24,23 @@ $filas = mysqli_num_rows($resultado);
 
 
 if ($filas && $tabla =="administracion") {
-  header ("location:../Admin/Admin.php");
+  ?>
+  <script>
+    Swal.fire({
+      title: 'Bienvenido',
+      text: "<?php echo $Nom_usuario[1]." ".$Nom_usuario[2] ?>",
+      icon: 'success',
+      showCancelButton: false,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ok'
+      }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href="../Admin/Admin.php"
+      }
+      })
+  </script>
+<?php
 }
 else if ($filas && $tabla =="recursos_humanos") {
   echo "rrhh";
@@ -31,11 +49,26 @@ else if ($filas && $tabla =="contabilidad") {
   echo "cont";
 }
 else{
-  echo "Error ";
+  ?>
 
-  echo $usuario;
-  echo $contraseña;
+  <script>
+    Swal.fire({
+    title: 'Error al ingresar los datos',
+    text: "Porfavor intente nuevamente",
+    icon: 'error',
+    showCancelButton: false,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Ok'
+    }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href="../login/Login.php"
+    }
+    })
+  </script>
+<?php
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
 ?>
+</body>
