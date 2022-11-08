@@ -18,7 +18,7 @@ $consulta = "SELECT * FROM $tabla WHERE $User  = '$usuario' and $Tipo_Contraseñ
 $resultado = mysqli_query($conexion, $consulta);
 
 $Nom_usuario = mysqli_fetch_array($resultado);
-
+$_SESSION["idlogem"]=$Nom_usuario[0];
 $filas = mysqli_num_rows($resultado);
 
 

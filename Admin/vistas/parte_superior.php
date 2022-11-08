@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <?php
 error_reporting(0);
+include("../../seguridad.php");
+
 session_start();
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['usuarioemple'];
-
-$query = "SELECT * FROM `administracion` WHERE  Nombre = '$nombre_usuario'";
+$Idlogem =  $_SESSION['idlogem'];
+$query = "SELECT * FROM `administracion` WHERE  id = '$Idlogem'";
 $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
@@ -48,7 +50,7 @@ $_SESSION["id_user"] = $Datos[0];
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../Admin/Admin.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -85,6 +87,7 @@ $_SESSION["id_user"] = $Datos[0];
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="Empleados.php">Empleados</a>
                         <a class="collapse-item" href="Clientes.php">Clientes</a>
+                        <a class="collapse-item" href="EditarPerfil.php">Editar perfil Admin</a>
                     </div>
                 </div>
             </li>
@@ -160,7 +163,7 @@ $_SESSION["id_user"] = $Datos[0];
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nombre_usuario." ".$Datos[2]?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $Datos[1]." ".$Datos[2]?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile_2.svg">
                             </a>

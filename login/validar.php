@@ -102,10 +102,5 @@ $contraseña2 = $_POST["password2"];
     }
   }
 
-
-
-
-
-
  ?>
 </body>
