@@ -49,10 +49,24 @@ else if ($filas && $tabla =="contabilidad") {
   echo "cont";
 }
 else{
-  echo "Error ";
+  ?>
 
-  echo $usuario;
-  echo $contraseña;
+  <script>
+    Swal.fire({
+    title: 'Error al ingresar los datos',
+    text: "Porfavor intente nuevamente",
+    icon: 'error',
+    showCancelButton: false,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Ok'
+    }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href="../login/Login.php"
+    }
+    })
+  </script>
+<?php
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
