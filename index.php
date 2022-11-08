@@ -137,7 +137,7 @@ error_reporting(0);
 	      <div class="modal-body">
 	        <ul class="profile-options-list">
 	        	<li>
-	        		<a href="usuario/seguridad.php"><i class="fas fa-user"></i> Mi perfil</a>
+	        		<a href="seguridad.php"><i class="fas fa-user"></i> Mi perfil</a>
 	        	</li>
 	        	<li>
 	        		<a href="#"><i class="fas fa-map-marker-alt"></i> Mis direcciones</a>

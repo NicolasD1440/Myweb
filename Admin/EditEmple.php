@@ -56,7 +56,7 @@
                          <div class="form-group row">
                            <label for="Telefono" class="col-3">Contraseña: </label>
                             <div class="mx-auto">
-                             <input type="number" name="contraseñaa" value="" class="form-control" >
+                             <input type="text" name="contraseñaa" value="" class="form-control" >
                            </div>
                          </div>
 
@@ -144,7 +144,7 @@
                   <div class="form-group row">
                     <label for="Telefono" class="col-3">Contraseña: </label>
                      <div class="mx-auto">
-                      <input type="number" name="contraseñar" value="" class="form-control" >
+                      <input type="text" name="contraseñar" value="" class="form-control" >
                     </div>
                   </div>
 
@@ -229,7 +229,7 @@
                  <div class="form-group row">
                    <label for="Telefono" class="col-3">Contraseña: </label>
                     <div class="mx-auto">
-                     <input type="number" name="contraseñac" value="" class="form-control" >
+                     <input type="text" name="contraseñac" value="" class="form-control" >
                    </div>
                  </div>
 
