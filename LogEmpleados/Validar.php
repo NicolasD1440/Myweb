@@ -28,7 +28,7 @@ else if ($filas && $tabla =="recursos_humanos") {
   echo "rrhh";
 }
 else if ($filas && $tabla =="contabilidad") {
-  header ("location:../Cont/Contable.php");
+  header ("location:../Cont/Index.php");
 }
 else{
   echo "Error ";

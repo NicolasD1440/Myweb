@@ -25,8 +25,7 @@ $_SESSION["id_user"] = $Datos[0];
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -55,7 +54,7 @@ $_SESSION["id_user"] = $Datos[0];
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="Contable.php">
+                <a class="nav-link" href="Index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pagina Principal</span></a>
             </li>
@@ -78,8 +77,8 @@ $_SESSION["id_user"] = $Datos[0];
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Principal:</h6>
-                        <a class="collapse-item" href="GP.php">Graficas Principales </a>
-                        <a class="collapse-item" href="#">No se que poner gg</a>
+                        <a class="collapse-item" href="Contable.php">Graficas Principales </a>
+                        <a class="collapse-item" href="GP.php">No se que poner gg</a>
                     </div>
                 </div>
             </li>
@@ -280,7 +279,7 @@ $_SESSION["id_user"] = $Datos[0];
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../Cont/Contable.php">
+                                <a class="dropdown-item" href="../Cont/Index.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
