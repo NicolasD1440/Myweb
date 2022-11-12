@@ -62,7 +62,7 @@ else if ($filas && $tabla =="recursos_humanos") {
 <?php
 }
 else if ($filas && $tabla =="contabilidad") {
-  echo "cont";
+  header ("location:../Cont/Index.php");
 }
 else{
   ?>
