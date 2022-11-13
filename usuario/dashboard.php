@@ -1,11 +1,11 @@
 <?php
 error_reporting(0);
-<<<<<<< HEAD
-include("seguridad.php");
-=======
-include("../../seguridad.php");
->>>>>>> 01d47e42192c06d624d202d3c37c6c7d535fc69a
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("location: ../login/Login.php");
+}
+
+
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['Usuario'];
 
