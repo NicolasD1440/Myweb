@@ -3,11 +3,12 @@ session_start();
 $id_user = $_SESSION["id_user"];
 $total =  $_SESSION["precio"];
 $dia = dia_semana();
+$Det_fecha = fecha_detalle();
 
 if (isset($_GET["domicilio"])) {
     $direccion = $_GET['direccion'];
     $conexion = mysqli_connect("localhost","root","","jjd-food");
-    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`) VALUES ('$id_user','$total','$dia','domicilio','$direccion')";
+    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`) VALUES ('$id_user','$total','$dia','domicilio','$direccion','$Det_fecha')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
       unset($_SESSION['precio']);
@@ -22,7 +23,7 @@ if (isset($_GET["domicilio"])) {
 
 if (isset($_GET["plazoleta"]) && isset($_SESSION['carrito'])) {
     $conexion = mysqli_connect("localhost","root","","jjd-food");
-    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`) VALUES ('$id_user','$total','$dia','Plazoleta','Centro comercial')";
+    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`,`det_fecha`) VALUES ('$id_user','$total','$dia','Plazoleta','Centro comercial')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
       unset($_SESSION['precio']);
@@ -67,3 +68,10 @@ function dia_semana(){
             }
             return "lunes";
    }
+
+   function fecha_detalle(){
+    setlocale(LC_ALL, 'es_ES');
+    date_default_timezone_set( 'America/Bogota' );
+    $time = date("Y-n-j");
+    return $time;
+}

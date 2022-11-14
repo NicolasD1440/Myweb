@@ -1,6 +1,7 @@
 <?php session_start();
 error_reporting(0);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -161,6 +162,7 @@ error_reporting(0);
 				<ul>
 					<!-- Platos -->
 					<?php
+					 
 								$consulta = "SELECT * FROM platos";
 								$conexion = mysqli_connect("localhost","root","","jjd-food");
 								$resultado = mysqli_query($conexion, $consulta);
