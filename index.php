@@ -160,180 +160,52 @@ error_reporting(0);
 				<h2 class="section-title">Los más pedidos</h2>
 				<ul>
 					<!-- Platos -->
-					<li>
-						<a href="#">
-							<div class="product-image">
-								<img src="img/producto1.jpg" alt="">
-							</div>
-							<div class="product-info">
-								<div class="product-info-inner">
-									<div class="tags">
-										<span>Descuento</span><span>Envío gratis</span>
-									</div>
-									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
-									<input name="precio" type="hidden" id="precio" value="10000" />
-					        <input name="titulo" type="hidden" id="titulo" value="Burrito especial" />
-					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
+					<?php
+								$consulta = "SELECT * FROM platos";
+								$conexion = mysqli_connect("localhost","root","","jjd-food");
+								$resultado = mysqli_query($conexion, $consulta);
+								while ($Datos = mysqli_fetch_array($resultado)) {
+									?>
+									<li>
+										<a href="#">
+											<div class="product-image">
+												<img src="img/<?php echo $Datos[5]?>" alt="">
+											</div>
+											<div class="product-info">
+												<div class="product-info-inner">
+													<div class="tags">
+														<span><?php echo $Datos[1]?></span><span><?php echo $Datos[2]?></span>
+													</div>
+													<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
+													<input name="precio" type="hidden" id="precio" value="<?php echo $Datos[4]?>" />
+													<input name="titulo" type="hidden" id="titulo" value="<?php echo $Datos[0]?>" />
+													<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
 
-									<h3 class="product-name">Burrito especial</h3>
-									<p class="restaurant">Restaurante de prueba</p>
-									<div class="stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="product-price"><span>$</span>10,000</p>
-							</div>
-							<div class="col text-center">
-								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
-							</div>
+													<h3 class="product-name"><?php echo $Datos[0]?></h3>
+													<p class="restaurant"><?php echo $Datos[3]?></p>
+													<div class="stars">
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+													</div>
+												</div>
+												<p class="product-price"><span>$</span><?php echo $Datos[4]?></p>
+											</div>
+											<div class="col text-center">
+												<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
+											</div>
 
-									</form>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<div class="product-image">
-								<img src="img/producto2.jpg" alt="">
-							</div>
-							<div class="product-info">
-								<div class="product-info-inner">
-									<div class="tags">
-										<span>2x1</span><span>Descuento 50%</span>
-									</div>
-									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
-									<input name="precio" type="hidden" id="precio" value="15000" />
-					        <input name="titulo" type="hidden" id="titulo" value="Postre de la casa" />
-					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-
-									<h3 class="product-name">Postre de la casa</h3>
-									<p class="restaurant">Restaurante de prueba</p>
-									<div class="stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="product-price"><span>$</span>15,000</p>
-							</div>
-							<div class="col text-center">
-								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
-							</div>
-
-									</form>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<div class="product-image">
-								<img src="img/producto3.jpg" alt="">
-							</div>
-							<div class="product-info">
-								<div class="product-info-inner">
-									<div class="tags">
-										<span>2x1</span><span>Envío gratis</span><span>Descuento</span>
-									</div>
-									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
-									<input name="precio" type="hidden" id="precio" value="25000" />
-					        <input name="titulo" type="hidden" id="titulo" value="Salmón" />
-					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-
-									<h3 class="product-name">Salmón</h3>
-									<p class="restaurant">Restaurante de prueba</p>
-									<div class="stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="product-price"><span>$</span>25,000</p>
-							</div>
-							<div class="col text-center">
-								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
-							</div>
-
-									</form>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<div class="product-image">
-								<img src="img/producto4.jpg" alt="">
-							</div>
-							<div class="product-info">
-								<div class="product-info-inner">
-									<div class="tags">
-										<span>Envío gratis</span>
-									</div>
-									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
-									<input name="precio" type="hidden" id="precio" value="20000" />
-					        <input name="titulo" type="hidden" id="titulo" value="Donas glaseadas x6" />
-					        <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
+													</form>
+										</a>
+									</li>
+									<?php
+								}
+					?>
 
 
-									<h3 class="product-name">Donas glaseadas x6</h3>
-									<p class="restaurant">Restaurante de prueba</p>
-									<div class="stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="product-price"><span>$</span>20,000</p>
-							</div>
-							<div class="col text-center">
-								<button  class="btn btn-primary" type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
-							</div>
 
-									</form>
-						</a>
-					</li>
-
-					<li>
-						<a href="#">
-							<div class="product-image">
-								<img src="img/producto5.jpg" alt="">
-							</div>
-							<div class="product-info">
-								<div class="product-info-inner">
-									<div class="tags">
-										<span>Envío gratis</span><span>Combo</span>
-									</div>
-									<form id="formulario" name="formulario" method="post" action="Carrito/cart.php">
-									<input name="precio" type="hidden" id="precio" value="15000" />
-									<input name="titulo" type="hidden" id="titulo" value="Mega hamburguesa" />
-									<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-
-
-									<h3 class="product-name">Mega hamburguesa</h3>
-									<p class="restaurant">Restaurante de prueba</p>
-									<div class="stars">
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-								<p class="product-price"><span>$</span>15,000</p>
-
-							</div>
-
-							<div class="col text-center">
-								<button class="btn btn-primary " type="submit"  ><i class="fas fa-shopping-cart"></i> Añadir al carrito</button>
-							</div>
-
-									</form>
-
-						</a>
-					</li>
 
 				</ul>
 				<div class="pt-4 pb-5 text-center">
