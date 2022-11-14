@@ -1,11 +1,10 @@
 <?php
 error_reporting(0);
+
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header("location: ../login/Login.php");
 }
-
-
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['Usuario'];
 

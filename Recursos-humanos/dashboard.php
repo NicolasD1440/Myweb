@@ -1,6 +1,9 @@
 <?php
 error_reporting(0);
 session_start();
+if (!isset($_SESSION['usuarioemple'])) {
+    header("location: ../login/Login.php");
+}
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['usuarioemple'];
 
@@ -9,8 +12,7 @@ $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
 $_SESSION["id_user"] = $Datos[0];
-
-
+//
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +101,7 @@ $_SESSION["id_user"] = $Datos[0];
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Navegacion:</h6>
                         <a class="collapse-item" href="../index.php">Pagina principal</a>
-            
+
                     </div>
                 </div>
             </li>
@@ -175,13 +177,13 @@ $_SESSION["id_user"] = $Datos[0];
 
 
                         <!-- Items de los mensajes - Messages -->
-                        <?php 
+                        <?php
                         $conexion = mysqli_connect("localhost","root","","jjd-food");
                         $query = "SELECT count(estado) FROM mensajes WHERE estado= 0";
                         $resultado = mysqli_query($conexion,$query);
-                        
+
                         $mensajes = mysqli_fetch_array($resultado);
-                        
+
                         ?>
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -321,13 +323,13 @@ $_SESSION["id_user"] = $Datos[0];
                 </div>
               </div>
             </div>
- 
 
-                      
 
-                       
-                       
-                       
+
+
+
+
+
                     </div>
                 </div>
 
@@ -397,7 +399,7 @@ $_SESSION["id_user"] = $Datos[0];
 </body>
 
 </html>
-<?php 
+<?php
 function fecha(){
     setlocale(LC_ALL, 'es_ES');
     date_default_timezone_set( 'America/Bogota' );
