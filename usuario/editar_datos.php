@@ -98,8 +98,6 @@ $Datos = mysqli_fetch_array($resultado);
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Navegacion:</h6>
-                        <a class="collapse-item" href="../login/Login.php">Ingreso</a>
-                        <a class="collapse-item" href="../login/Login.php">Registro</a>
                         <a class="collapse-item" href="forgot-password.html">Olvide mi contraseña</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Otras paginas:<paginas></paginas>:</h6>
