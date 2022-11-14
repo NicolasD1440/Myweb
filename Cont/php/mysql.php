@@ -27,57 +27,7 @@ class MySql{
     }
 
 
-       public function getUsuarios() {
-        $usuarios = 0;
-        try {
-            $strQuery = "SELECT count(*) FROM usuarios";
-            if ($this->conBDPDO()) {
-                $pQuery = $this->oConBD->prepare($strQuery);
-                $pQuery->execute();
-                $usuarios = $pQuery->fetchColumn();
-            }
-        } catch (PDOException $e) {
-            echo "MySQL.getUsuarios: " . $e->getMessage() . "\n";
-            return -1;
-        }
-        return $usuarios;
-
-    }
-
-    public function getPlatos() {
-        $platos = 0;
-        try {
-            $strQuery = "SELECT count(*) FROM usuarios";
-            if ($this->conBDPDO()) {
-                $pQuery = $this->oConBD->prepare($strQuery);
-                $pQuery->execute();
-                $platos = $pQuery->fetchColumn();
-            }
-        } catch (PDOException $e) {
-            echo "MySQL.getPlatos: " . $e->getMessage() . "\n";
-            return -1;
-        }
-        return $platos;
-
-    }
-
-     public function getVendidos()
-    {
-        $vendidos = 0;
-        try {
-            $strQuery = "SELECT count(*) FROM usuarios";
-            if ($this->conBDPDO()) {
-                $pQuery = $this->oConBD->prepare($strQuery);
-                $pQuery->execute();
-                $vendidos = $pQuery->fetchColumn();
-            }
-        } catch (PDOException $e) {
-            echo "MySQL.getVendidos: " . $e->getMessage() . "\n";
-            return -1;
-        }
-        return $vendidos;
-
-    }
+      
 
     public function getDatosGrafica() 
     {
@@ -85,7 +35,7 @@ class MySql{
         $rawdata = array();
         $i = 0;
         try {
-            $strQuery = "SELECT Fecha as tfecha, Precio as tprecio FROM pedido";
+            $strQuery = "SELECT SUM(Precio) as tprecio, DATE_FORMAT(det_fecha, '%Y-%m-%d') as tfecha FROM pedido GROUP BY DATE_FORMAT(det_fecha, '%Y-%m-%d')";
 
               if ($this->conBDPDO()) {
                 $pQuery = $this->oConBD->prepare($strQuery);
@@ -109,12 +59,101 @@ class MySql{
         return $jDatos;
     }
 
+    public function getDatosGrafica2() 
+    {
+        $jDatos = '';
+        $rawdata = array();
+        $i = 0;
+        try {
+            $strQuery = "SELECT SUM(Precio) as tprecio, Fecha as tfecha FROM pedido GROUP BY Fecha";
+
+              if ($this->conBDPDO()) {
+                $pQuery = $this->oConBD->prepare($strQuery);
+                $pQuery->execute();
+                $pQuery->setFetchMode(PDO::FETCH_ASSOC);
+
+                while($variable = $pQuery->fetch()) {
+                    $oGrafica = new Grafica();
+                    $oGrafica->totalFecha = $variable['tfecha'];
+                    $oGrafica->totalVendidos = $variable['tprecio'];
+                    
+                    $rawdata[$i] = $oGrafica;
+                    $i++;
+                    }
+                $jDatos = json_encode($rawdata);
+            }
+        } catch (PDOException $e) {
+            echo "MySQL.getDatosGrafica: " . $e->getMessage() . "\n";
+            return -1;
+        }
+        return $jDatos;
+    }
+
+    public function getDatosGrafica3() 
+    {
+        $jDatos = '';
+        $rawdata = array();
+        $i = 0;
+        try {
+            $strQuery = "SELECT SUM(Precio) as tprecio, DATE_FORMAT(det_fecha, '%Y-%m-%d') as tfecha FROM pedido GROUP BY DATE_FORMAT(det_fecha, '%Y-%m-%d')";
+
+              if ($this->conBDPDO()) {
+                $pQuery = $this->oConBD->prepare($strQuery);
+                $pQuery->execute();
+                $pQuery->setFetchMode(PDO::FETCH_ASSOC);
+
+                while($variable = $pQuery->fetch()) {
+                    $oGrafica = new Grafica();
+                    $oGrafica->totalFecha = $variable['tfecha'];
+                    $oGrafica->totalVendidos = $variable['tprecio'];
+                    
+                    $rawdata[$i] = $oGrafica;
+                    $i++;
+                    }
+                $jDatos = json_encode($rawdata);
+            }
+        } catch (PDOException $e) {
+            echo "MySQL.getDatosGrafica: " . $e->getMessage() . "\n";
+            return -1;
+        }
+        return $jDatos;
+    }
+
+    public function getDatosGrafica4() 
+    {
+        $jDatos = '';
+        $rawdata = array();
+        $i = 0;
+        try {
+            $strQuery = "SELECT SUM(Precio) as tprecio, DATE_FORMAT(det_fecha, '%Y-%m-%d') as tfecha FROM pedido GROUP BY DATE_FORMAT(det_fecha, '%Y-%m-%d')";
+
+              if ($this->conBDPDO()) {
+                $pQuery = $this->oConBD->prepare($strQuery);
+                $pQuery->execute();
+                $pQuery->setFetchMode(PDO::FETCH_ASSOC);
+
+                while($variable = $pQuery->fetch()) {
+                    $oGrafica = new Grafica();
+                    $oGrafica->totalFecha = $variable['tfecha'];
+                    $oGrafica->totalVendidos = $variable['tprecio'];
+                    
+                    $rawdata[$i] = $oGrafica;
+                    $i++;
+                    }
+                $jDatos = json_encode($rawdata);
+            }
+        } catch (PDOException $e) {
+            echo "MySQL.getDatosGrafica: " . $e->getMessage() . "\n";
+            return -1;
+        }
+        return $jDatos;
+    }
 
 }
-class Grafica{
+    class Grafica{
     public $totalFecha = 0;
     public $totalVendidos = 0;
+    }
     
-}
 
 ?>

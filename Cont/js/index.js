@@ -6,7 +6,6 @@ function index() {
 
 }
 	  this.getIndicadores = function () {
-        //# Usuarios
         $.ajax({
             statusCode: {
                 404: function () {
@@ -17,58 +16,6 @@ function index() {
             method: 'POST',
             data: {
                 rq: "1"
-            }
-        }).done(function (datos) {
-            //La lógica 3,000
-            $("#idUsuarios").text(parseFloat(datos).toLocaleString());
-        });
-
-        //# Platos
-        $.ajax({
-            statusCode: {
-                404: function () {
-                    console.log("Esta página no existe");
-                }
-            },
-            url: 'php/servidor.php',
-            method: 'POST',
-            data: {
-                rq: "2"
-            }
-        }).done(function (datos) {
-            //La lógica 3,000
-            $("#idPlatos").text(parseFloat(datos).toLocaleString());
-        });
-
-        //# Ventas
-        $.ajax({
-            statusCode: {
-                404: function () {
-                    console.log("Esta página no existe");
-                }
-            },
-            url: 'php/servidor.php',
-            method: 'POST',
-            data: {
-                rq: "3"
-            }
-        }).done(function (datos) {
-            //La lógica 3,000
-            $("#idVentas").text(parseFloat(datos).toLocaleString());
-        });
-}
-
-    this.getDatosGraficas = function () {
-        $.ajax({
-            statusCode: {
-                404: function () {
-                    console.log("Esta página no existe");
-                }
-            },
-            url: 'php/servidor.php',
-            method: 'POST',
-            data: {
-                rq: "4"
                 }
         }).done(function (datos) {
             //La lógica
@@ -103,6 +50,54 @@ function index() {
                   'rgba(153, 102, 255, 1)',
                   'rgba(255, 159, 64, 1)'
               ],
+              borderWidth: 3
+                            },
+                        
+                        ]
+                    }
+                });
+            }
+        });
+}
+
+    this.getDatosGraficas = function () {
+         $.ajax({
+            statusCode: {
+                404: function () {
+                    console.log("Esta página no existe");
+                }
+            },
+            url: 'php/servidor.php',
+            method: 'POST',
+            data: {
+                rq: "2"
+                }
+        }).done(function (datos) {
+            //La lógica
+            if (datos != '') {
+                let etiquetas = new Array();
+                let tVendidos = new Array();
+                let coloresV = new Array();
+                let coloresP = new Array();
+                var jDatos = JSON.parse(datos);
+
+                  for (let i in jDatos) {
+                    etiquetas.push(jDatos[i].totalFecha);
+                    tVendidos.push(jDatos[i].totalVendidos);
+                    coloresV.push("#36004D");
+                    coloresP.push("#679B6B");
+                  }
+
+                var cta = document.getElementById('Grafica2').getContext('2d');
+                var myChart = new Chart(cta, {
+                    type: 'line',
+                    data: {
+                        labels: etiquetas,
+                        datasets: [
+                            {
+                                label: 'Ventas',
+                                data: tVendidos,
+                                borderColor: coloresP,
               borderWidth: 3
                             },
                         
