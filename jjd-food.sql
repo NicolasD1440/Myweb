@@ -141,6 +141,7 @@ CREATE TABLE `pedido` (
   `Fecha` varchar(25) NOT NULL,
   `tipo` varchar(25) NOT NULL,
   `direccion` varchar(35) NOT NULL,
+
   `det_fecha` date NOT NULL,
   KEY `id` (`id`),
   CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`)

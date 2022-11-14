@@ -173,13 +173,13 @@ $_SESSION["id_user"] = $Datos[0];
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="../Admin/Admin.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    Perfil
                                 </a>
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../LogEmpleados/logoutemple/logoutemple.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cerrar sesion
                                 </a>
                             </div>
                         </li>
