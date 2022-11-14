@@ -15,7 +15,7 @@ if (isset($_GET["domicilio"])) {
       unset($_SESSION['carrito']);
       header("location: ../index.php");
       mysqli_free_result($resultado);
-      
+
     }else{
       echo "No se pudo";
     }
@@ -23,14 +23,14 @@ if (isset($_GET["domicilio"])) {
 
 if (isset($_GET["plazoleta"]) && isset($_SESSION['carrito'])) {
     $conexion = mysqli_connect("localhost","root","","jjd-food");
-    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`,`det_fecha`) VALUES ('$id_user','$total','$dia','Plazoleta','Centro comercial')";
+    $consulta = "INSERT INTO `pedido`(`id`, `Precio`, `Fecha`, `tipo`, `direccion`,`det_fecha`) VALUES ('$id_user','$total','$dia','Plazoleta','Centro comercial','$Det_fecha')";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado) {
       unset($_SESSION['precio']);
       unset($_SESSION['carrito']);
       header("location: ../index.php");
       mysqli_free_result($resultado);
-     
+
     }else{
       echo "No se pudo";
     }
