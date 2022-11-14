@@ -141,6 +141,8 @@ CREATE TABLE `pedido` (
   `Fecha` varchar(25) NOT NULL,
   `tipo` varchar(25) NOT NULL,
   `direccion` varchar(35) NOT NULL,
+
+  `det_fecha` date NOT NULL,
   KEY `id` (`id`),
   CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -152,8 +154,31 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
-INSERT INTO `pedido` VALUES (1,25000,'lunes','Plazoleta','Centro comercial');
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `platos`
+--
+
+DROP TABLE IF EXISTS `platos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `platos` (
+  `Titulo` varchar(200) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `precio` bigint(25) NOT NULL,
+  `imagen` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `platos`
+--
+
+LOCK TABLES `platos` WRITE;
+/*!40000 ALTER TABLE `platos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `platos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -251,4 +276,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-12 18:37:09
+-- Dump completed on 2022-11-13 21:01:47
