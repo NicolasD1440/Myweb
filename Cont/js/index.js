@@ -48,7 +48,8 @@ function index() {
                   'rgba(255, 206, 86, 1)',
                   'rgba(75, 192, 192, 3)',
                   'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
+                  'rgba(2, 159, 64, 1)',
+                  'RGBA(0,227,80,1)'
               ],
               borderWidth: 3
                             },
@@ -98,6 +99,7 @@ function index() {
                                 label: 'Ventas',
                                 data: tVendidos,
                                 borderColor: coloresP,
+                                tension: 0,
               borderWidth: 3
                             },
                         

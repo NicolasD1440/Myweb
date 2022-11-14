@@ -65,7 +65,14 @@ class MySql{
         $rawdata = array();
         $i = 0;
         try {
-            $strQuery = "SELECT SUM(Precio) as tprecio, Fecha as tfecha FROM pedido GROUP BY Fecha";
+            $strQuery = "SELECT SUM(Precio) as tprecio, Fecha as tfecha FROM pedido GROUP BY Fecha ORDER BY CASE 
+            WHEN Fecha = 'lunes' THEN 1 
+            WHEN Fecha = 'martes' THEN 2 
+            WHEN Fecha = 'miercoles' THEN 3 
+            WHEN Fecha = 'jueves' THEN 4 
+            WHEN Fecha = 'viernes' THEN 5 
+            WHEN Fecha = 'Sabado' THEN 6 
+            WHEN Fecha = 'Domingo' THEN 7 END ASC";
 
               if ($this->conBDPDO()) {
                 $pQuery = $this->oConBD->prepare($strQuery);
