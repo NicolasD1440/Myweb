@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
   <div class="container">
-    <h1>Perfil Contabilidad</h1>
+    <h1>Plataforma Datos Y Graficas principales</h1>
  </div>
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@
                   <div class="card text-white text-center bg-primary mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #00AA9E;">USUARIOS</div>
                         <div class="card-body">
-                            <h5 class="card-title"><span id="idUsuarios"> </span></h5>
+                            <h5 class="card-title"> Dato Modificable </h5>
                             <p class="card-text"># Total de usuarios registrados</p>
                         </div>
                   </div>
@@ -39,10 +39,10 @@
 
               <div class="col-md-3">
                 <div class="card text-white text-center bg-info mb-3" style="max-width: 18rem;">
-                      <div class="card-header text-white" style="background-color: #00FFFF;">Header</div>
+                      <div class="card-header text-white" style="background-color: #00FFFF;">Platillos</div>
                         <div class="card-body">
-                            <h5 class="card-title">Ola k ase</h5>
-                            <p class="card-text">Total precio platillos</p>
+                            <h5 class="card-title">  </h5>
+                            <p class="card-text"># Total de los platillos pedidos</p>
                         </div>
                   </div>
               </div>
@@ -52,8 +52,8 @@
                 <div class="card bg-light text-center mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #D3D3D3;">Header</div>
                         <div class="card-body">
-                            <h5 class="card-title">Ola k ase</h5>
-                            <p class="card-text">Mucho texto para colocar despues ggs</p>
+                            <h5 class="card-title"> Dato Modificable </h5>
+                            <p class="card-text">Ventas totales, desde apertura</p>
                         </div>
                   </div>
               </div>
@@ -61,16 +61,26 @@
 
             </div>
               </div>
-
-              <div class="row my-3">
-                  <div class="col-lg-8 mx-auto">
-                   <center> <H2> REPORTE DE VENTAS </H2> </center>
-                    <canvas id="Grafica1" class="grafica"> </canvas>
+               <center> <H2> REPORTE DE VENTAS </H2> </center> 
+               <div class="card-body">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                      <canvas id="Grafica1" class="grafica"> </canvas>
+                    </div>
+                    <div class="col-lg-6">
+                       <canvas id="Grafica2" class="grafica chartjs-render-monitor ml-auto"> </canvas>
+                    </div>
                   </div>
+               </div>
+              
+                   
 
-              </div>
-
-<script src="js/index.js" defer> </script>               
+                    
+                   
+                    
+                 
+<script src="js/index.js"> </script>     
+           
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
