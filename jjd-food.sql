@@ -100,6 +100,29 @@ INSERT INTO `dependencias` VALUES (1,'Administracion'),(3,'Contabilidad'),(2,'Re
 UNLOCK TABLES;
 
 --
+-- Table structure for table `dias`
+--
+
+DROP TABLE IF EXISTS `dias`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dias` (
+  `Dia` varchar(20) NOT NULL,
+  PRIMARY KEY (`Dia`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dias`
+--
+
+LOCK TABLES `dias` WRITE;
+/*!40000 ALTER TABLE `dias` DISABLE KEYS */;
+INSERT INTO `dias` VALUES ('domingo'),('jueves'),('lunes'),('martes'),('miercoles'),('sabado'),('viernes');
+/*!40000 ALTER TABLE `dias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `mensajes`
 --
 
@@ -111,6 +134,7 @@ CREATE TABLE `mensajes` (
   `id_mensaje` int(11) NOT NULL,
   `Asunto` varchar(45) NOT NULL,
   `mensaje` varchar(100) NOT NULL,
+  `fecha` varchar(200) NOT NULL,
   `estado` int(11) NOT NULL,
   PRIMARY KEY (`id_mensaje`),
   KEY `id` (`id`),
@@ -124,7 +148,7 @@ CREATE TABLE `mensajes` (
 
 LOCK TABLES `mensajes` WRITE;
 /*!40000 ALTER TABLE `mensajes` DISABLE KEYS */;
-INSERT INTO `mensajes` VALUES (1,2000,'Felicitaciones','La comida ta buena :D',1),(1,2020,'nose','hola',1),(1,2022,'Queja','La comida no esta tan buena :(',0);
+INSERT INTO `mensajes` VALUES (1,2000,'Felicitaciones','La comida ta buena :D','',1),(1,2020,'nose','hola','',1),(1,2022,'Queja','La comida no esta tan buena :(','',0);
 /*!40000 ALTER TABLE `mensajes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,10 +165,11 @@ CREATE TABLE `pedido` (
   `Fecha` varchar(25) NOT NULL,
   `tipo` varchar(25) NOT NULL,
   `direccion` varchar(35) NOT NULL,
-
   `det_fecha` date NOT NULL,
   KEY `id` (`id`),
-  CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`)
+  KEY `Fecha` (`Fecha`),
+  CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`),
+  CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`Fecha`) REFERENCES `dias` (`Dia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -166,7 +191,9 @@ DROP TABLE IF EXISTS `platos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `platos` (
   `Titulo` varchar(200) NOT NULL,
-  `descripcion` varchar(200) NOT NULL,
+  `Oferta` varchar(200) NOT NULL,
+  `Envio` varchar(200) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
   `precio` bigint(25) NOT NULL,
   `imagen` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -178,6 +205,7 @@ CREATE TABLE `platos` (
 
 LOCK TABLES `platos` WRITE;
 /*!40000 ALTER TABLE `platos` DISABLE KEYS */;
+INSERT INTO `platos` VALUES ('Burrito Especial','Descuento','Envio Gratis','Burrito con carnes mixtas, res, pollo, cerdo y maiz tierno, salsas al gusto',20000,'producto1.jpg'),('Dona x6 ','Descuento','Envio Gratis','Postre tipo dona con aderezo de chispitas',20000,'producto4.jpg'),('Hamburguesa de la casa','Combo','Envio Gratis','Hamburguesa de doble piso con carne de pollo y res, pepinillos, tomate, lechuga, queso mozarella, salsas BBQ, tomate, piña adicional salsa de la casa, acompañamiento de papas a la francesa y gaseosa pepsi',35000,'producto5.jpg'),('Pancakes','2x1','Envio Gratis','Pancakes con miel de abejas, chips de chocolate y fresas',15000,'producto2.jpg'),('Salmon','2x1','Envio Gratis','Salmon cocinado a las finas hierbas, con sumo de limón y acompañamiento de verduras frescas ',30000,'producto3.jpg'),('Ensalada Mixta','Descuento','Envio Gratis','Ensalada de pepino, tomate cherry, uvas pasas, y carne de cerdo y pollo, con salsa agridulce',31000,'producto6.jpg');
 /*!40000 ALTER TABLE `platos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,11 +247,11 @@ DROP TABLE IF EXISTS `respuesta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `respuesta` (
-  `id-mensaje` int(11) NOT NULL,
+  `id_mensaje` int(11) NOT NULL,
   `Asunto` varchar(25) NOT NULL,
   `Mensaje` varchar(100) NOT NULL,
-  KEY `id-mensaje` (`id-mensaje`),
-  CONSTRAINT `respuesta_ibfk_2` FOREIGN KEY (`id-mensaje`) REFERENCES `mensajes` (`id_mensaje`)
+  KEY `id-mensaje` (`id_mensaje`),
+  CONSTRAINT `respuesta_ibfk_2` FOREIGN KEY (`id_mensaje`) REFERENCES `mensajes` (`id_mensaje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -276,4 +304,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-13 21:01:47
+-- Dump completed on 2022-11-14 16:39:57
