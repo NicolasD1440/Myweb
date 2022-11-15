@@ -102,7 +102,7 @@ class MySql{
         $rawdata = array();
         $i = 0;
         try {
-            $strQuery = "SELECT SUM(Precio) as tprecio, DATE_FORMAT(det_fecha, '%Y-%m-%d') as tfecha FROM pedido GROUP BY DATE_FORMAT(det_fecha, '%Y-%m-%d')";
+            $strQuery = "SELECT Titulo as tnombre, Precio as tprecio FROM platos";
 
               if ($this->conBDPDO()) {
                 $pQuery = $this->oConBD->prepare($strQuery);
@@ -111,7 +111,7 @@ class MySql{
 
                 while($variable = $pQuery->fetch()) {
                     $oGrafica = new Grafica();
-                    $oGrafica->totalFecha = $variable['tfecha'];
+                    $oGrafica->totalFecha = $variable['tnombre'];
                     $oGrafica->totalVendidos = $variable['tprecio'];
                     
                     $rawdata[$i] = $oGrafica;

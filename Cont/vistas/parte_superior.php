@@ -78,7 +78,7 @@ $_SESSION["id_user"] = $Datos[0];
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Principal:</h6>
                         <a class="collapse-item" href="Contable.php">Graficas Principales </a>
-                        <a class="collapse-item" href="GP.php">No se que poner gg</a>
+                        <!-- <a class="collapse-item" href="GP.php">No se que poner gg</a> -->
                     </div>
                 </div>
             </li>
@@ -94,8 +94,8 @@ $_SESSION["id_user"] = $Datos[0];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Precios platos:</h6>
-                        <a class="collapse-item" href="#">Graf. platos</a>
-                        <a class="collapse-item" href="#">Precio, platos</a>
+                        <a class="collapse-item" href="GP.php">Graf. platos</a>
+                        <!-- <a class="collapse-item" href="#">Precio, platos</a> -->
                         <!--<a class="collapse-item" href="EditUser.php">Editar Usuario</a> -->
                     </div>
                 </div>
@@ -149,12 +149,12 @@ $_SESSION["id_user"] = $Datos[0];
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
+                        <!-- Nav Item - Alerts --> 
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
+                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
@@ -170,8 +170,8 @@ $_SESSION["id_user"] = $Datos[0];
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">Noviembre 12, 2022</div>
+                                        <span class="font-weight-bold">Hay cambios en los reportes!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -192,13 +192,13 @@ $_SESSION["id_user"] = $Datos[0];
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">Octubre 6, 2022</div>
+                                        Recuerda, si no te mantienes activo, en 30 minutos tu cuenta se cerrara.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Muestrame todas las alertas</a>
                             </div>
-                        </li>
+                        </li> 
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -206,14 +206,14 @@ $_SESSION["id_user"] = $Datos[0];
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
+                                <span class="badge badge-danger badge-counter">0</span>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
+                                    Centro de mensajes
+                                </h6> <!--
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="img/undraw_profile_1.svg"
@@ -264,7 +264,7 @@ $_SESSION["id_user"] = $Datos[0];
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div>
-                        </li>
+                        </li> -->
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 

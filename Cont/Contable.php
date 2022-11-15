@@ -31,7 +31,7 @@
                   <div class="card text-white text-center bg-primary mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #00AA9E;">USUARIOS</div>
                         <div class="card-body">
-                            <h5 class="card-title"> Dato Modificable </h5>
+                            <h5 class="card-title"> 5 </h5>
                             <p class="card-text"># Total de usuarios registrados</p>
                         </div>
                   </div>
@@ -41,7 +41,7 @@
                 <div class="card text-white text-center bg-info mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #00FFFF;">Platillos</div>
                         <div class="card-body">
-                            <h5 class="card-title">  </h5>
+                            <h5 class="card-title"> 8 </h5>
                             <p class="card-text"># Total de los platillos pedidos</p>
                         </div>
                   </div>
@@ -52,7 +52,7 @@
                 <div class="card bg-light text-center mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #D3D3D3;">Header</div>
                         <div class="card-body">
-                            <h5 class="card-title"> Dato Modificable </h5>
+                            <h5 class="card-title"> 168.000 </h5>
                             <p class="card-text">Ventas totales, desde apertura</p>
                         </div>
                   </div>
@@ -76,8 +76,8 @@
                        <canvas id="Grafica3" class="grafica"> </canvas>
                     </div>
                     <div class="col-lg-6">
-                       <canvas id="Grafica" class="grafica"> </canvas>
-                    </div>
+                       <canvas id="Grafica4" class="grafica"> </canvas>
+                    </div> 
                   </div>
                </div>
               
