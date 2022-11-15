@@ -65,10 +65,18 @@
                <div class="card-body">
                   <div class="row justify-content-center">
                     <div class="col-lg-6">
+                      <center><h5>Ultimas ventas</h5></center>
                       <canvas id="Grafica1" class="grafica"> </canvas>
                     </div>
                     <div class="col-lg-6">
+                      <center><h5>% Ventas Diarias</h5></center>
                        <canvas id="Grafica2" class="grafica chartjs-render-monitor ml-auto"> </canvas>
+                    </div>
+                    <div class="col-lg-6">
+                       <canvas id="Grafica3" class="grafica"> </canvas>
+                    </div>
+                    <div class="col-lg-6">
+                       <canvas id="Grafica" class="grafica"> </canvas>
                     </div>
                   </div>
                </div>

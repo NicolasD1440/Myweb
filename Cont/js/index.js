@@ -57,7 +57,27 @@ function index() {
                         ]
                     }
                 });
+
+                
+                var ctc = document.getElementById('Grafica3').getContext('2d');
+                var myChart = new Chart(ctc, {
+                    type: 'line',
+                    data: {
+                        labels: etiquetas,
+                        datasets: [
+                            {
+                                label: 'Ventas',
+                                data: tVendidos,
+                                fill: false,
+                                borderColor: 'rgb(75, 192, 192)',
+              borderWidth: 3
+                            },
+                        
+                        ]
+                    }
+                });
             }
+
         });
 }
 
@@ -99,13 +119,41 @@ function index() {
                                 label: 'Ventas',
                                 data: tVendidos,
                                 borderColor: coloresP,
-                                tension: 0,
+                                tension: 0.2,
               borderWidth: 3
                             },
                         
                         ]
                     }
                 });
+
+                var ctp = document.getElementById('Grafica4').getContext('2d');
+                var myChart = new Chart(ctp, {
+                    type: 'doughnut',
+                    data: {
+                        labels: etiquetas,
+                        datasets: [
+                            {
+                                label: 'Ventas',
+                                data: tVendidos,
+                                render: percentage,
+                                backgroundColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 3)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(2, 159, 64, 1)',
+                  'RGBA(0,227,80,1)'
+              ],
+
+              borderWidth: 3
+                            },
+                        
+                        ]
+                    }
+                });
+
             }
         });
     }
