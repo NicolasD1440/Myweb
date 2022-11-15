@@ -10871,7 +10871,7 @@ header .avatar-container i {
 }
 .products-list-container ul li .product-image img {
   width: 100%;
-  height: 140px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
