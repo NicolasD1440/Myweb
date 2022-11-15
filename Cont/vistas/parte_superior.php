@@ -2,6 +2,9 @@
 <?php
 error_reporting(0);
 session_start();
+if (!isset($_SESSION['usuarioemple'])) {
+    header("location: ../login/Login.php");
+}
 $conexion = mysqli_connect("localhost","root","","jjd-food");
 $nombre_usuario =  $_SESSION['usuarioemple'];
 
@@ -149,7 +152,7 @@ $_SESSION["id_user"] = $Datos[0];
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts --> 
+                        <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -198,7 +201,7 @@ $_SESSION["id_user"] = $Datos[0];
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Muestrame todas las alertas</a>
                             </div>
-                        </li> 
+                        </li>
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
