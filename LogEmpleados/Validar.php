@@ -62,7 +62,23 @@ else if ($filas && $tabla =="recursos_humanos") {
 <?php
 }
 else if ($filas && $tabla =="contabilidad") {
-  header ("location:../Cont/Index.php");
+  ?>
+  <script>
+    Swal.fire({
+      title: 'Bienvenido',
+      text: "<?php echo $Nom_usuario[1]." ".$Nom_usuario[2] ?>",
+      icon: 'success',
+      showCancelButton: false,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ok'
+      }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href="../Cont/Index.php"
+      }
+      })
+  </script>
+  <?php
 }
 else{
   ?>
