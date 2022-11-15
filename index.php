@@ -141,10 +141,7 @@ error_reporting(0);
 	        		<a href=" seguridad.php"><i class="fas fa-user"></i> Mi perfil</a>
 	        	</li>
 	        	<li>
-	        		<a href="#"><i class="fas fa-map-marker-alt"></i> Mis direcciones</a>
-	        	</li>
-	        	<li>
-	        		<a href="#" class="text-danger"><i class="fas fa-times-circle"></i> Cerrar sesión</a>
+	        		<a href="logout/logout.php" class="text-danger"><i class="fas fa-times-circle"></i> Cerrar sesión</a>
 	        	</li>
 	        </ul>
 	      </div>
@@ -162,7 +159,7 @@ error_reporting(0);
 				<ul>
 					<!-- Platos -->
 					<?php
-					 
+
 								$consulta = "SELECT * FROM platos";
 								$conexion = mysqli_connect("localhost","root","","jjd-food");
 								$resultado = mysqli_query($conexion, $consulta);

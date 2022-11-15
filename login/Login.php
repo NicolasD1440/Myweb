@@ -36,6 +36,7 @@
                 <i class="fa-solid fa-briefcase"></i>
               </a>
             </div>
+            <a href="../index.php" style="text-decoration:none"><p class="social-text">Volver a la pagina principal</p></a>
           </form>
 
           <form action="validar.php" class="sign-up-form" method="post">
