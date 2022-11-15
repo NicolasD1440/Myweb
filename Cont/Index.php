@@ -27,11 +27,11 @@
 
                     <!-- Cabecera de la pagina -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Perfil</h1>
+                       
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="row justify-content-center">
 
                         <!-- Nombre usuario Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -41,7 +41,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Nombre</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[2]?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[1]?> <?php echo $Datos[2]?></div>
                                         </div>
                                         <div class="col-auto">
 
@@ -58,7 +58,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Apellido</div>
+                                                Funcion:</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[3]?></div>
                                         </div>
                                         <div class="col-auto">
@@ -76,8 +76,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Correo</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[5]?></div>
+                                                Salario</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1.500.000</div>
                                         </div>
                                         <div class="col-auto">
 
@@ -94,8 +94,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Edad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Datos[4]?></div>
+                                                Notificaciones</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> 0 Multas</div>
                                         </div>
                                         <div class="col-auto">
 
@@ -103,16 +103,17 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="mx-auto">
                           <div class="card col-20" style="width: 18rem;">
                             <img src="img/undraw_profile.svg" class="card-img-top" width="100" height="100">
                             <div class="card-body">
                               <center><p class="card-text">
-                                <h6>Nombre: <?php echo $Datos[2]?></h6>
-                                <h6>Apellido: <?php echo $Datos[3]?></h6>
-                                <h6>Corrreo: <?php echo $Datos[5]?></h6>
-                                <h6>Telefono: <?php echo $Datos[6]?></h6>
+                                <h6>Nombre: <?php echo $Datos[1]?></h6>
+                                <h6>Apellido: <?php echo $Datos[2]?></h6>
+                                <h6>Corrreo: Juan.cespedes-o@uniminuto.edu.co</h6>
+                                <h6>Telefono: 320 351 17 28</h6>
+                                <h6>Edad: 20 </h6>
                               </p></center>
                             </div>
                           </div>
