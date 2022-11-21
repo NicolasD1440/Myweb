@@ -1,5 +1,7 @@
 ## JJD-FOOD
-Este es un ejemplo de texto que da entrada a una lista genérica de elementos:
-- Elemento 1
-- Elemento 2
-- Elemento 3
+Aplicativo web para cadena de restaurantes
+- Compras del usuario integradas
+- dependencia mercadeo
+- dependencia administracion
+- dependencia recursos humanos
+https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png
