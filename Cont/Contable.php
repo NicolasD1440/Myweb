@@ -31,7 +31,9 @@
                   <div class="card text-white text-center bg-primary mb-3" style="max-width: 18rem;">
                       <div class="card-header text-white" style="background-color: #00AA9E;">USUARIOS</div>
                         <div class="card-body">
+
                             <h5 class="card-title"><?php echo $Rows1[0];?> </h5>
+
                             <p class="card-text"># Total de usuarios registrados</p>
                         </div>
                   </div>
