@@ -13,6 +13,27 @@ $resultado = mysqli_query($conexion,$query);
 
 $Datos = mysqli_fetch_array($resultado);
 $_SESSION["id_user"] = $Datos[0];
+
+
+//Usuarios registrados
+
+$query2 = "SELECT count(*) FROM `usuarios`";
+$resultado2 = mysqli_query($conexion,$query2);
+$Rows1 = mysqli_fetch_array($resultado2);
+
+//Platos pedidos
+
+$query3 = "SELECT count(*) FROM pedido";
+$resultado3 = mysqli_query($conexion,$query3);
+$Rows2 = mysqli_fetch_array($resultado3);
+
+//ventas totales
+
+$query4 = "SELECT SUM(Precio) from pedido";
+$resultado4 = mysqli_query($conexion,$query4);
+$Rows3 = mysqli_fetch_array($resultado4);
+
+
 ?>
 <html lang="en">
 
