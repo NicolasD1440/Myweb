@@ -4,4 +4,4 @@ Aplicativo web para cadena de restaurantes
 - dependencia mercadeo
 - dependencia administracion
 - dependencia recursos humanos
-https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png
+-![Image text](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg)
