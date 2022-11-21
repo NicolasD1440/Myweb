@@ -1,6 +1,6 @@
 <?php require_once "vistas/parte_superior.php" ?>
 <div class="container">
-    <h1>Perfil Recursos Humanos</h1>
+    <h1>Perfil Atencion al cliente</h1>
     <div class="container-fluid">
         <!-- Content Row -->
         <div class="row">
@@ -74,4 +74,4 @@
 
     </div>
   </div>
-                <?php require_once "vistas/parte_inferior.php" ?>       
+                <?php require_once "vistas/parte_inferior.php" ?>

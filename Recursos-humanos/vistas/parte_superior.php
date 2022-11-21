@@ -28,7 +28,7 @@ $_SESSION["id_user"] = $Datos[0];
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>JJD FOOD RRHH</title>
+    <title>JJD FOOD AAC</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@ $_SESSION["id_user"] = $Datos[0];
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">JJD RRHH</div>
+                <div class="sidebar-brand-text mx-3">JJD AAC</div>
             </a>
 
             <!-- Divider -->
@@ -64,7 +64,7 @@ $_SESSION["id_user"] = $Datos[0];
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Perfil recursos humanos</span></a>
+                    <span>Perfil Atencion al Cliente</span></a>
             </li>
 
             <!-- Divider -->
