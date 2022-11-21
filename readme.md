@@ -4,4 +4,4 @@ Aplicativo web para cadena de restaurantes
 - dependencia mercadeo
 - dependencia administracion
 - dependencia recursos humanos
-- ![Image text](https://raw.githubusercontent.com/usuario/repositorio/rama/ruta/al/asset)
+- ![Image text](https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png)
