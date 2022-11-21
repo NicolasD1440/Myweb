@@ -4,4 +4,4 @@ Aplicativo web para cadena de restaurantes
 - dependencia mercadeo
 - dependencia administracion
 - dependencia recursos humanos
--![Image text](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg)
+- ![Image text](https://raw.githubusercontent.com/usuario/repositorio/rama/ruta/al/asset)
