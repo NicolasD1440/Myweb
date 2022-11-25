@@ -13,7 +13,7 @@
              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Atencion al cliente</button>
            </li>
            <li class="nav-item" role="presentation">
-             <button class="nav-link" id="cont-tab" data-bs-toggle="tab" data-bs-target="#cont" type="button" role="tab" aria-controls="cont" aria-selected="false">Mercadeop</button>
+             <button class="nav-link" id="cont-tab" data-bs-toggle="tab" data-bs-target="#cont" type="button" role="tab" aria-controls="cont" aria-selected="false">Mercadeo</button>
            </li>
          </ul>
          <br>
