@@ -1,5 +1,7 @@
 # JJD-FOOD
 
+## Mira la pagina aqui: 
+https://jjdfood.000webhostapp.com/index.php
 ## Descripción
 El aplicativo web de comidas rápidas es una plataforma que ofrece una experiencia completa para los usuarios y empleados del negocio de comidas rápidas. Este aplicativo cuenta con varias funcionalidades diseñadas para mejorar la eficiencia y satisfacción de los clientes, así como para facilitar la gestión interna del negocio.
 
