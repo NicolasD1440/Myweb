@@ -353,7 +353,32 @@ INSERT INTO `usuarios` (`id`, `Nombre`, `nombre_usu`, `apellido_usu`, `edad`, `c
 (97, 'Maria Rodriguez', 'Maria', 'Rodriguez', 30, 'maria@gmail.com', 87654321, 'password47'),
 (98, 'Carlos Gomez', 'Carlos', 'Gomez', 35, 'carlos@gmail.com', 98765432, 'password48'),
 (99, 'Laura Fernandez', 'Laura', 'Fernandez', 28, 'laura@gmail.com', 23456789, 'password49'),
-(100, 'Pedro Ramirez', 'Pedro', 'Ramirez', 22, 'pedro@gmail.com', 98765432, 'password50');
+(100, 'Pedro Ramirez', 'Pedro', 'Ramirez', 22, 'pedro@gmail.com', 98765432, 'password50'),
+(101, 'Ana Lopez', 'Ana', 'Lopez', 27, 'ana@gmail.com', 76543210, 'password51'),
+(102, 'Luis Martinez', 'Luis', 'Martinez', 31, 'luis@gmail.com', 23456789, 'password52'),
+(103, 'Sofia Herrera', 'Sofia', 'Herrera', 29, 'sofia@gmail.com', 65432109, 'password53'),
+(104, 'Gabriel Torres', 'Gabriel', 'Torres', 24, 'gabriel@gmail.com', 10987654, 'password54'),
+(105, 'Valeria Castro', 'Valeria', 'Castro', 26, 'valeria@gmail.com', 98765432, 'password55'),
+(106, 'Diego Sanchez', 'Diego', 'Sanchez', 33, 'diego@gmail.com', 12345678, 'password56'),
+(107, 'Carmen Gomez', 'Carmen', 'Gomez', 37, 'carmen@gmail.com', 87654321, 'password57'),
+(108, 'Andres Vargas', 'Andres', 'Vargas', 40, 'andres@gmail.com', 98765432, 'password58'),
+(109, 'Isabel Medina', 'Isabel', 'Medina', 32, 'isabel@gmail.com', 23456789, 'password59'),
+(110, 'Felipe Rojas', 'Felipe', 'Rojas', 29, 'felipe@gmail.com', 98765432, 'password60'),
+(111, 'Camila Rios', 'Camila', 'Rios', 23, 'camila@gmail.com', 76543210, 'password61'),
+(112, 'Javier Paredes', 'Javier', 'Paredes', 30, 'javier@gmail.com', 23456789, 'password62'),
+(113, 'Daniela Torres', 'Daniela', 'Torres', 27, 'daniela@gmail.com', 65432109, 'password63'),
+(114, 'Hector Mendoza', 'Hector', 'Mendoza', 25, 'hector@gmail.com', 10987654, 'password64'),
+(115, 'Carolina Silva', 'Carolina', 'Silva', 28, 'carolina@gmail.com', 98765432, 'password65'),
+(116, 'Ricardo Ortega', 'Ricardo', 'Ortega', 35, 'ricardo@gmail.com', 12345678, 'password66'),
+(117, 'Ana Maria Castro', 'Ana Maria', 'Castro', 39, 'anamaria@gmail.com', 87654321, 'password67'),
+(118, 'Manuel Vargas', 'Manuel', 'Vargas', 42, 'manuel@gmail.com', 98765432, 'password68'),
+(119, 'Marcela Morales', 'Marcela', 'Morales', 34, 'marcela@gmail.com', 23456789, 'password69'),
+(120, 'Andrea Herrera', 'Andrea', 'Herrera', 31, 'andrea@gmail.com', 98765432, 'password70'),
+(121, 'Juanita Sanchez', 'Juanita', 'Sanchez', 27, 'juanita@gmail.com', 76543210, 'password71'),
+(122, 'Miguel Gomez', 'Miguel', 'Gomez', 33, 'miguel@gmail.com', 23456789, 'password72'),
+(123, 'Carla Torres', 'Carla', 'Torres', 30, 'carla@gmail.com', 65432109, 'password73'),
+(124, 'Fernando Rodriguez', 'Fernando', 'Rodriguez', 28, 'fernando@gmail.com', 10987654, 'password74'),
+(125, 'Lorena Ramirez', 'Lorena', 'Ramirez', 25, 'lorena@gmail.com', 98765432, 'password75');
 --
 -- Índices para tablas volcadas
 --
