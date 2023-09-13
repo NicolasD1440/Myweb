@@ -242,7 +242,31 @@ INSERT INTO `platos` (`Titulo`, `Oferta`, `Envio`, `descripcion`, `precio`, `ima
 ('Hamburguesa de la casa', 'Combo', 'Envio Gratis', 'Hamburguesa de doble piso con carne de pollo y res, pepinillos, tomate, lechuga, queso mozarella, salsas BBQ, tomate, piña adicional salsa de la casa, acompañamiento de papas a la francesa y gaseosa pepsi', 35000, 'producto5.jpg'),
 ('Pancakes', '2x1', 'Envio Gratis', 'Pancakes con miel de abejas, chips de chocolate y fresas', 15000, 'producto2.jpg'),
 ('Salmon', '2x1', 'Envio Gratis', 'Salmon cocinado a las finas hierbas, con sumo de limón y acompañamiento de verduras frescas ', 30000, 'producto3.jpg'),
-('Ensalada Mixta', 'Descuento', 'Envio Gratis', 'Ensalada de pepino, tomate cherry, uvas pasas, y carne de cerdo y pollo, con salsa agridulce', 31000, 'producto6.jpg');
+('Ensalada Mixta', 'Descuento', 'Envio Gratis', 'Ensalada de pepino, tomate cherry, uvas pasas, y carne de cerdo y pollo, con salsa agridulce', 31000, 'producto6.jpg'),
+  ('Burrito Especial 2', 'Descuento', 'Envio Gratis', 'Burrito con carnes mixtas, pollo, cerdo y maiz tierno, salsas al gusto', 20000, 'producto7.jpg'),
+('Dona x12', 'Descuento', 'Envio Gratis', 'Postre tipo dona con aderezo de chispitas y glaseado de vainilla', 20000, 'producto8.jpg'),
+('Hamburguesa de Pollo', 'Combo', 'Envio Gratis', 'Hamburguesa de pollo con tomate, lechuga, queso cheddar, salsa BBQ, acompañamiento de papas a la francesa y gaseosa coca cola', 30000, 'producto9.jpg'),
+('Waffles', '2x1', 'Envio Gratis', 'Waffles con jarabe de maple, frutas frescas y crema batida', 15000, 'producto10.jpg'),
+('Sushi Variado', '2x1', 'Envio Gratis', 'Sushi de salmón, atún, camarón y vegetales, acompañado de salsa de soja y jengibre encurtido', 35000, 'producto11.jpg'),
+('Ensalada César', 'Descuento', 'Envio Gratis', 'Ensalada de lechuga romana, pollo a la parrilla, croutones, queso parmesano y aderezo césar', 28000, 'producto12.jpg'),
+('Pizza Margarita', 'Descuento', 'Envio Gratis', 'Pizza con salsa de tomate, queso mozzarella y albahaca fresca', 25000, 'producto13.jpg'),
+('Tacos de Camarón', '2x1', 'Envio Gratis', 'Tacos de camarón al ajillo con guacamole, salsa chipotle y tortillas de maíz', 32000, 'producto14.jpg'),
+('Ceviche de Pescado', 'Descuento', 'Envio Gratis', 'Ceviche de pescado fresco con cebolla morada, cilantro, jugo de limón y ají', 27000, 'producto15.jpg'),
+('Pasta Alfredo', 'Descuento', 'Envio Gratis', 'Pasta con salsa alfredo cremosa, pollo a la parrilla y queso parmesano rallado', 29000, 'producto16.jpg'),
+('Sopa de Tomate', 'Combo', 'Envio Gratis', 'Sopa de tomate casera con albahaca fresca y crujientes croutones', 18000, 'producto17.jpg'),
+('Pollo a la Parrilla', '2x1', 'Envio Gratis', 'Pechuga de pollo a la parrilla acompañada de arroz, frijoles y ensalada mixta', 26000, 'producto18.jpg'),
+('Tarta de Manzana', 'Descuento', 'Envio Gratis', 'Tarta de manzana casera con canela y helado de vainilla', 22000, 'producto19.jpg'),
+('Sushi Vegano', 'Descuento', 'Envio Gratis', 'Sushi de vegetales frescos como pepino, aguacate, zanahoria y pimiento, acompañado de salsa de soja baja en sodio', 32000, 'producto20.jpg'),
+('Sopa de Lentejas', '2x1', 'Envio Gratis', 'Sopa de lentejas con verduras frescas y especias aromáticas', 19000, 'producto21.jpg'),
+('Wrap de Pollo', 'Descuento', 'Envio Gratis', 'Wrap de pollo a la parrilla con lechuga, tomate, queso cheddar y aderezo ranch', 23000, 'producto22.jpg'),
+('Ceviche Mixto', 'Descuento', 'Envio Gratis', 'Ceviche de pescado y mariscos con cebolla morada, cilantro, jugo de limón y ají', 32000, 'producto23.jpg'),
+('Lasagna de Carne', 'Combo', 'Envio Gratis', 'Lasagna de carne molida con salsa de tomate, queso mozzarella y parmesano', 35000, 'producto24.jpg'),
+('Tacos de Pollo', '2x1', 'Envio Gratis', 'Tacos de pollo al pastor con cebolla, cilantro, piña y tortillas de maíz', 28000, 'producto25.jpg'),
+('Ensalada Caprese', 'Descuento', 'Envio Gratis', 'Ensalada de tomate, mozzarella fresca, albahaca y aderezo balsámico', 25000, 'producto26.jpg'),
+('Sushi de Salmón', '2x1', 'Envio Gratis', 'Sushi de salmón fresco con aguacate, pepino y salsa de anguila', 33000, 'producto27.jpg'),
+('Sopa de Champiñones', 'Descuento', 'Envio Gratis', 'Sopa de champiñones con crema, cebolla caramelizada y crujientes croutones', 20000, 'producto28.jpg'),
+('Pechuga de Pavo', 'Descuento', 'Envio Gratis', 'Pechuga de pavo a la plancha con puré de papas y vegetales al vapor', 27000, 'producto29.jpg'),
+('Maki de Atún', '2x1', 'Envio Gratis', 'Maki de atún fresco con aguacate y pepino, acompañado de salsa de soja y wasabi', 32000, 'producto30.jpg');
 
 -- --------------------------------------------------------
 
