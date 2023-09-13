@@ -254,8 +254,56 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `Nombre`, `nombre_usu`, `apellido_usu`, `edad`, `correo`, `Telefono`, `contraseña`) VALUES
-(1, 'Nicolas Castiblanco', 'Nicolas ', 'Castiblanco', 19, 'nicolas@gmail.com', 84683813, 'user1');
-
+(1, 'Nicolas Castiblanco', 'Nicolas ', 'Castiblanco', 19, 'nicolas@gmail.com', 84683813, 'user1'),
+(2, 'Jane Smith', 'janesmith', 'Smith', 30, 'janesmith@example.com', 9876543210, 'password2'),
+(3, 'Michael Johnson', 'michaeljohnson', 'Johnson', 35, 'michaeljohnson@example.com', 5678901234, 'password3'),
+(4, 'Emily Davis', 'emilydavis', 'Davis', 28, 'emilydavis@example.com', 4567890123, 'password4'),
+(5, 'David Brown', 'davidbrown', 'Brown', 32, 'davidbrown@example.com', 7890123456, 'password5'),
+(6, 'Sarah Wilson', 'sarahwilson', 'Wilson', 27, 'sarahwilson@example.com', 2345678901, 'password6'),
+(7, 'Matthew Taylor', 'matthewtaylor', 'Taylor', 31, 'matthewtaylor@example.com', 9012345678, 'password7'),
+(8, 'Olivia Anderson', 'oliviaanderson', 'Anderson', 29, 'oliviaanderson@example.com', 3456789012, 'password8'),
+(9, 'Daniel Martinez', 'danielmartinez', 'Martinez', 33, 'danielmartinez@example.com', 6789012345, 'password9'),
+(10, 'Sophia Thomas', 'sophiathomas', 'Thomas', 26, 'sophiathomas@example.com', 1234567890, 'password10'),
+(11, 'Jacob Garcia', 'jacobgarcia', 'Garcia', 31, 'jacobgarcia@example.com', 9876543210, 'password11'),
+(12, 'Isabella Rodriguez', 'isabellarodriguez', 'Rodriguez', 34, 'isabellarodriguez@example.com', 5678901234, 'password12'),
+(13, 'William Wilson', 'williamwilson', 'Wilson', 27, 'williamwilson@example.com', 4567890123, 'password13'),
+(14, 'Mia Martinez', 'miamartinez', 'Martinez', 30, 'miamartinez@example.com', 7890123456, 'password14'),
+(15, 'Ethan Thompson', 'ethanthompson', 'Thompson', 25, 'ethanthompson@example.com', 2345678901, 'password15'),
+(16, 'Ava Harris', 'avaharris', 'Harris', 28, 'avaharris@example.com', 9012345678, 'password16'),
+(17, 'James Lewis', 'jameslewis', 'Lewis', 32, 'jameslewis@example.com', 3456789012, 'password17'),
+(18, 'Charlotte Walker', 'charlottewalker', 'Walker', 29, 'charlottewalker@example.com', 6789012345, 'password18'),
+(19, 'Benjamin Green', 'benjamingreen', 'Green', 33, 'benjamingreen@example.com', 1234567890, 'password19'),
+(20, 'Amelia Hall', 'ameliahall', 'Hall', 26, 'ameliahall@example.com', 9876543210, 'password20'),
+(21, 'Alexander Young', 'alexanderyoung', 'Young', 31, 'alexanderyoung@example.com', 5678901234, 'password21'),
+(22, 'Harper King', 'harperking', 'King', 34, 'harperking@example.com', 4567890123, 'password22'),
+(23, 'Daniel Lopez', 'daniellopez', 'Lopez', 27, 'daniellopez@example.com', 7890123456, 'password23'),
+(24, 'Sophia Scott', 'sophiascott', 'Scott', 30, 'sophiascott@example.com', 2345678901, 'password24'),
+(25, 'Mason Murphy', 'masonmurphy', 'Murphy', 25, 'masonmurphy@example.com', 9012345678, 'password25');
+(26, 'Liam Turner', 'liamturner', 'Turner', 28, 'liamturner@example.com', 3456789012, 'password26'),
+(27, 'Emma Adams', 'emmaadams', 'Adams', 31, 'emmaadams@example.com', 6789012345, 'password27'),
+(28, 'Noah Campbell', 'noahcampbell', 'Campbell', 26, 'noahcampbell@example.com', 1234567890, 'password28'),
+(29, 'Olivia Hill', 'oliviahill', 'Hill', 29, 'oliviahill@example.com', 9876543210, 'password29'),
+(30, 'William Mitchell', 'williammitchell', 'Mitchell', 33, 'williammitchell@example.com', 5678901234, 'password30'),
+(31, 'Ava Roberts', 'avaroberts', 'Roberts', 27, 'avaroberts@example.com', 4567890123, 'password31'),
+(32, 'James Carter', 'jamescarter', 'Carter', 30, 'jamescarter@example.com', 7890123456, 'password32'),
+(33, 'Isabella Phillips', 'isabellaphillips', 'Phillips', 25, 'isabellaphillips@example.com', 2345678901, 'password33'),
+(34, 'Benjamin Evans', 'benjaminevans', 'Evans', 28, 'benjaminevans@example.com', 9012345678, 'password34'),
+(35, 'Sophia Parker', 'sophiaparker', 'Parker', 31, 'sophiaparker@example.com', 3456789012, 'password35'),
+(36, 'Mason Edwards', 'masonedwards', 'Edwards', 26, 'masonedwards@example.com', 6789012345, 'password36'),
+(37, 'Charlotte Collins', 'charlottecollins', 'Collins', 29, 'charlottecollins@example.com', 1234567890, 'password37'),
+(38, 'Joseph Stewart', 'josephstewart', 'Stewart', 33, 'josephstewart@example.com', 9876543210, 'password38'),
+(39, 'Amelia Sanchez', 'ameliasanchez', 'Sanchez', 27, 'ameliasanchez@example.com', 5678901234, 'password39'),
+(40, 'Henry Morris', 'henrymorris', 'Morris', 30, 'henrymorris@example.com', 4567890123, 'password40'),
+(41, 'Harper Rogers', 'harperrogers', 'Rogers', 25, 'harperrogers@example.com', 7890123456, 'password41'),
+(42, 'Michael Reed', 'michaelreed', 'Reed', 28, 'michaelreed@example.com', 2345678901, 'password42'),
+(43, 'Evelyn Cook', 'evelyncook', 'Cook', 31, 'evelyncook@example.com', 9012345678, 'password43'),
+(44, 'Logan Griffin', 'logangriffin', 'Griffin', 26, 'logangriffin@example.com', 3456789012, 'password44'),
+(45, 'Avery Diaz', 'averydiaz', 'Diaz', 29, 'averydiaz@example.com', 6789012345, 'password45'),
+(46, 'Abigail Hayes', 'abigailhayes', 'Hayes', 33, 'abigailhayes@example.com', 1234567890, 'password46'),
+(47, 'Daniel Rivera', 'danielrivera', 'Rivera', 27, 'danielrivera@example.com', 9876543210, 'password47'),
+(48, 'Emily Ward', 'emilyward', 'Ward', 30, 'emilyward@example.com', 5678901234, 'password48'),
+(49, 'Matthew Cox', 'matthewcox', 'Cox', 25, 'matthewcox@example.com', 4567890123, 'password49'),
+(50, 'Sofia Howard', 'sofiahoward', 'Howard', 28, 'sofiahoward@example.com', 7890123456, 'password50');
 --
 -- Índices para tablas volcadas
 --
