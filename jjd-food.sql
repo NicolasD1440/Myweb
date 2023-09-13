@@ -186,9 +186,6 @@ CREATE TABLE `mensajes` (
 
 INSERT INTO `mensajes` (`id`, `id_mensaje`, `Asunto`, `mensaje`, `fecha`, `estado`) VALUES
 (1, 2000, 'Felicitaciones', 'La comida ta buena :D', '', 1),
-(1, 2020, 'nose', 'hola', '', 1),
-(1, 2022, 'Queja', 'La comida no esta tan buena :(', '', 0),
-(1, 2000, 'Felicitaciones', 'La comida ta buena :D', '', 1),
 (2, 2020, 'nose', 'hola', '', 1),
 (3, 2022, 'Queja', 'La comida no esta tan buena :(', '', 0),
 (4, 2001, 'Felicitaciones', 'El servicio es excelente!', '', 1),
