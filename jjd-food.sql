@@ -209,8 +209,31 @@ CREATE TABLE `recursos_humanos` (
 --
 
 INSERT INTO `recursos_humanos` (`id`, `Nombre`, `Apellido`, `Dependencia`, `Salario`, `Contraseña`) VALUES
+(1, 'Maria', 'Gomez', 'Recursos humanos', 800000, 'pass1'),
+(2, 'Carlos', 'Lopez', 'Recursos humanos', 750000, 'pass2'),
+(3, 'Laura', 'Rodriguez', 'Recursos humanos', 850000, 'pass3'),
+(4, 'Pedro', 'Martinez', 'Recursos humanos', 900000, 'pass4'),
+(5, 'Ana', 'Hernandez', 'Recursos humanos', 700000, 'pass5'),
 (6, 'Nicolas', 'Perez', 'Recursos humanos', 900000, '123'),
-(7, 'Juan', 'Robles', 'Recursos humanos', 50, 'Cont2');
+(7, 'Juan', 'Robles', 'Recursos humanos', 50, 'Cont2'),
+(8, 'Luisa', 'Garcia', 'Recursos humanos', 600000, 'pass8'),
+(9, 'Andres', 'Torres', 'Recursos humanos', 850000, 'pass9'),
+(10, 'Carolina', 'Sanchez', 'Recursos humanos', 750000, 'pass10'),
+(11, 'Diego', 'Ramirez', 'Recursos humanos', 900000, 'pass11'),
+(12, 'Sofia', 'Luna', 'Recursos humanos', 700000, 'pass12'),
+(13, 'Felipe', 'Ortiz', 'Recursos humanos', 800000, 'pass13'),
+(14, 'Camila', 'Castro', 'Recursos humanos', 750000, 'pass14'),
+(15, 'Javier', 'Vargas', 'Recursos humanos', 900000, 'pass15'),
+(16, 'Daniela', 'Soto', 'Recursos humanos', 850000, 'pass16'),
+(17, 'Hector', 'Mendoza', 'Recursos humanos', 700000, 'pass17'),
+(18, 'Valentina', 'Paredes', 'Recursos humanos', 800000, 'pass18'),
+(19, 'Ricardo', 'Silva', 'Recursos humanos', 750000, 'pass19'),
+(20, 'Marcela', 'Gutierrez', 'Recursos humanos', 900000, 'pass20'),
+(21, 'Andrea', 'Fernandez', 'Recursos humanos', 700000, 'pass21'),
+(22, 'Juanita', 'Rojas', 'Recursos humanos', 800000, 'pass22'),
+(23, 'Miguel', 'Herrera', 'Recursos humanos', 750000, 'pass23'),
+(24, 'Carla', 'Morales', 'Recursos humanos', 900000, 'pass24'),
+(25, 'Fernando', 'Gomez', 'Recursos humanos', 850000, 'pass25');
 
 -- --------------------------------------------------------
 
