@@ -42,8 +42,15 @@ CREATE TABLE `administracion` (
 
 INSERT INTO `administracion` (`id`, `Nombre`, `Apellido`, `Dependencia`, `Salario`, `Contraseña`) VALUES
 (1, 'Juan', 'Robles', 'Administracion', 900000, '1234'),
-(4, 'Deivy', 'Tesla', 'Administracion', 10000000, 'Admin2');
-
+(2, 'Maria', 'Gomez', 'Administracion', 800000, 'pass1'),
+(3, 'Carlos', 'Lopez', 'Administracion', 750000, 'pass2'),
+(4, 'Laura', 'Rodriguez', 'Administracion', 850000, 'pass3'),
+(5, 'Pedro', 'Martinez', 'Administracion', 900000, 'pass4'),
+(6, 'Ana', 'Hernandez', 'Administracion', 700000, 'pass5'),
+(7, 'Deivy', 'Tesla', 'Administracion', 10000000, 'Admin2'),
+(8, 'Luisa', 'Garcia', 'Administracion', 600000, 'pass8'),
+(9, 'Andres', 'Torres', 'Administracion', 850000, 'pass9'),
+(10, 'Carolina', 'Sanchez', 'Administracion', 750000, 'pass10');
 -- --------------------------------------------------------
 
 --
