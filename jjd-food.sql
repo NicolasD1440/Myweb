@@ -801,12 +801,7 @@ ALTER TABLE `respuesta`
   ADD CONSTRAINT `respuesta_ibfk_2` FOREIGN KEY (`id_mensaje`) REFERENCES `mensajes` (`id_mensaje`);
 COMMIT;
 
-ALTER TABLE `pedido`
-  ADD COLUMN `plato_id` int(11) NOT NULL;
 
-
-ALTER TABLE `pedido`
-  ADD CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`plato_id`) REFERENCES `platos` (`id_del_plato`);
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
